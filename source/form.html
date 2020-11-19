@@ -49,18 +49,59 @@
         <fieldset class="form__fieldset field-group">
           <ul class="field-group__list">
             <li class="field-group__item">
-              <label class="field-group__title">Фамилия:
+              <label class="field-group__label">Фамилия:
                 <input class="field-group__text-input" type="text" name="user-surname" placeholder="Укажите фамилию *">
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__title">Имя:
+              <label class="field-group__label">Имя:
                 <input class="field-group__text-input" type="text" name="user-name" placeholder="Введите ваше имя *">
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__title">Отчество:
+              <label class="field-group__label">Отчество:
                 <input class="field-group__text-input" type="text" name="user-patronymic" placeholder="Ну и отчество тоже">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset field-group">
+          <legend class="field-group__legend">Ваши безбашенные достижения в путешествии</legend>
+          <ul class="field-group__list">
+            <li class="field-group__item">
+              <label class="field-group__label">
+                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="took-selfie" checked>
+                Сделал селфи с акулой
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__label">
+                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="burned-beach" checked>
+                Обгорел на пляже
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__label">
+                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="saw-chuck-norris">
+                Видел Чака Норриса
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__label">
+                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="bought-souvenirs">
+                Накупил сувениров
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__label">
+                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="held-tower" checked>
+                Удержал башню
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__label">
+                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="trashed-hotel">
+                Разгромил отель
               </label>
             </li>
           </ul>
@@ -68,19 +109,19 @@
         <fieldset class="form__fieldset field-group">
           <ul class="field-group__list">
             <li class="field-group__item">
-              <label class="field-group__title">Номер телефона
+              <label class="field-group__label">Номер телефона
                 <input class="field-group__text-input" type="tel" name="user-phone" placeholder="Номер, пожалуйста">
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__title">Адрес почты
+              <label class="field-group__label">Адрес почты
                 <input class="field-group__text-input" type="email" name="user-email" placeholder="Введите почту *" required>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__fieldset field-group">
-          <legend class="field-group__title">С каким приложением путешествовали?</legend>
+          <legend class="field-group__legend">С каким приложением путешествовали?</legend>
           <ul class="field-group__list">
             <li class="field-group__item">
               <label class="field-group__label">
@@ -103,7 +144,7 @@
           </ul>
         </fieldset>
         <div class="form__fieldset field-group">
-          <label class="field-group__title">Опишите свои эмоции
+          <label class="field-group__label">Опишите свои эмоции
             <textarea class="field-group__text-input" name="text-review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </label>
         </div>
