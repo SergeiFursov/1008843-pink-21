@@ -21,7 +21,7 @@
           </a>
         </li>
         <li class="site-list__item">
-          <a href="photo.html">
+          <a href="catalog.html">
             Фотографии
           </a>
         </li>
@@ -39,33 +39,34 @@
     </div>
   </nav>
 </header>
-<main class="page-form">
+<<main class="page-form">
+  <h1 class="visually-hidden">Заявка на конкурс</h1>
   <section class="form-competition">
     <div class="form-competition__wrapper">
       <h2 class="form-competition__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
       <p class="form-competition__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
       <form class="form" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="field-group">
+        <fieldset class="form__fieldset field-group">
           <ul class="field-group__list">
             <li class="field-group__item">
-              <label class="field-group__title">Фамилия:
+              <label class="field-group__label">Фамилия:
                 <input class="field-group__text-input" type="text" name="user-surname" placeholder="Укажите фамилию *">
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__title">Имя:
+              <label class="field-group__label">Имя:
                 <input class="field-group__text-input" type="text" name="user-name" placeholder="Введите ваше имя *">
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__title">Отчество:
+              <label class="field-group__label">Отчество:
                 <input class="field-group__text-input" type="text" name="user-patronymic" placeholder="Ну и отчество тоже">
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="field-group">
-          <legend class="field-group__title">Ваши безбашенные достижения в путешествии</legend>
+        <fieldset class="form__fieldset field-group">
+          <legend class="field-group__legend">Ваши безбашенные достижения в путешествии</legend>
           <ul class="field-group__list">
             <li class="field-group__item">
               <label class="field-group__label">
@@ -105,22 +106,22 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="field-group">
+        <fieldset class="form__fieldset field-group">
           <ul class="field-group__list">
             <li class="field-group__item">
-              <label class="field-group__title">Номер телефона
+              <label class="field-group__label">Номер телефона
                 <input class="field-group__text-input" type="tel" name="user-phone" placeholder="Номер, пожалуйста">
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__title">Адрес почты
-                <input class="field-group__text-input" type="email" name="user-email" placeholder="Введите почту *">
+              <label class="field-group__label">Адрес почты
+                <input class="field-group__text-input" type="email" name="user-email" placeholder="Введите почту *" required>
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="field-group">
-          <legend class="field-group__title">С каким приложением путешествовали?</legend>
+        <fieldset class="form__fieldset field-group">
+          <legend class="field-group__legend">С каким приложением путешествовали?</legend>
           <ul class="field-group__list">
             <li class="field-group__item">
               <label class="field-group__label">
@@ -142,12 +143,12 @@
             </li>
           </ul>
         </fieldset>
-        <p class="field__group">
-          <label class="field-group__title">Опишите свои эмоции
+        <div class="form__fieldset field-group">
+          <label class="field-group__label">Опишите свои эмоции
             <textarea class="field-group__text-input" name="text-review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </label>
-        </p>
-        <button class="form__button" type="submit">Отправить форму</button>
+        </div>
+        <button class="button form__button" type="submit">Отправить форму</button>
         <small class="form__legend">* — Обязательные поля</small>
       </form>
     </div>
