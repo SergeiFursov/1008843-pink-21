@@ -1,16 +1,27 @@
 .application {
+  padding: 29px 0 38px 0;
   color: @basic-white;
   text-align: center;
+  outline: 5px solid rgba(255, 155, 155, 0.9);
+  outline-offset: 5px;
 }
 
 .application-wrapper {
   .wrapper();
-  outline: 1px solid yellow;
-  outline-offset: 1px;
 }
 
 .application__slogan {
-  /*color: @basic-white;*/
+  font-weight: @fw-small;
+  font-size: @fs-large;
+  line-height: 29px;
+}
+
+.application__button {
+  font-weight: @fw-large;
   font-size: @fs-medium;
-  text-transform: uppercase;
+  line-height: @lh-small;
+}
+
+.application__text {
+  font-weight: @fw-small;
 }

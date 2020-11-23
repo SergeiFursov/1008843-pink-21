@@ -1,8 +1,10 @@
 // Tariffs
 
 .tariffs {
-
+  padding: 83px 0 49px 0;
   background-color: @basic-smoky-white;
+  outline: 5px solid blueviolet;
+  outline-offset: 5px;
 }
 
 .tariffs__wrapper {
@@ -15,11 +17,17 @@
 }
 
 .tariffs__name {
-  color: @basic-white;
   font-weight: @fw-large;
   font-size: 16px;
   line-height: @lh-large;
   text-transform: uppercase;
+  color: @basic-white;
+}
+
+.tariffs__price {
+  font-weight: @fw-small;
+  font-size: @fs-medium;
+  line-height: @lh-large;
 }
 
 .tariffs_tuning {
