@@ -3,41 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Пинк</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
-<header class="page-header">
-  <a class="page-header__logo" href="index.html">
-    <img class="page-header__logo-image" src="https://via.placeholder.com/150x100" width="150" height="100" alt="Логотип Пинк">
-  </a>
-  <nav class="main-navigation">
-    <button class="main-navigation__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
-    <div class="main-navigation__wrapper">
-      <ul class="main-navigation__list site-list">
-        <li class="site-list__item">
-          <a href="index.html">
-            Главная
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a href="photo.html">
-            Фотографии
-          </a>
-        </li>
-        <li class="site-list__item site-list__item--active">
-          <a>
-            Конкурс
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a href="https://htmlacademy.ru/intensive/adaptive">
-            Html academy
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<header class="page-header form-header">
+  <div class="page-header__menu">
+    <a class="page-header__logo-image">
+      <img src="img/pink.png" width="74" height="23" alt="Слово Пинк">
+    </a>
+    <nav class="main-navigation">
+      <button class="main-navigation__toggle" type="button">
+        <span>Открыть меню</span>
+      </button>
+      <div class="main-navigation__wrapper">
+        <ul class="main-navigation__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </header>
 <main class="page-form">
   <h1 class="visually-hidden">Заявка на конкурс</h1>
@@ -67,39 +63,39 @@
         </fieldset>
         <fieldset class="form__fieldset field-group">
           <legend class="field-group__legend">Ваши безбашенные достижения в путешествии</legend>
-          <ul class="field-group__list">
+          <ul class="field-group__list field-group__list--bg-grey">
             <li class="field-group__item">
-              <label class="field-group__label">
+              <label class="field-group__label field-group__label--dark">
                 <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="took-selfie" checked>
                 Сделал селфи с акулой
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__label">
+              <label class="field-group__label field-group__label--dark">
                 <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="burned-beach" checked>
                 Обгорел на пляже
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__label">
+              <label class="field-group__label field-group__label--dark">
                 <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="saw-chuck-norris">
                 Видел Чака Норриса
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__label">
+              <label class="field-group__label field-group__label--dark">
                 <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="bought-souvenirs">
                 Накупил сувениров
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__label">
+              <label class="field-group__label field-group__label--dark">
                 <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="held-tower" checked>
                 Удержал башню
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__label">
+              <label class="field-group__label field-group__label--dark">
                 <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="trashed-hotel">
                 Разгромил отель
               </label>
@@ -122,21 +118,21 @@
         </fieldset>
         <fieldset class="form__fieldset field-group">
           <legend class="field-group__legend">С каким приложением путешествовали?</legend>
-          <ul class="field-group__list">
+          <ul class="field-group__list field-group__list--bg-grey">
             <li class="field-group__item">
-              <label class="field-group__label">
+              <label class="field-group__label field-group__label--dark">
                 <input class="visually-hidden field-group__input  field-group__input--radio" name="system-type" type="radio" value="ios" checked>
                 Pink для iOS
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__label">
+              <label class="field-group__label field-group__label--dark">
                 <input class="visually-hidden field-group__input  field-group__input--radio" name="system-type" type="radio" value="android">
                 Pink на Android
               </label>
             </li>
             <li class="field-group__item">
-              <label class="field-group__label">
+              <label class="field-group__label field-group__label--dark">
                 <input class="visually-hidden field-group__input  field-group__input--radio" name="system-type" type="radio" value="windows phone">
                 Windows Phone
               </label>
@@ -144,12 +140,14 @@
           </ul>
         </fieldset>
         <div class="form__fieldset field-group">
-          <label class="field-group__label">Опишите свои эмоции
-            <textarea class="field-group__text-input" name="text-review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <label class="field-group__label field-group__label--red">Опишите свои эмоции
+            <input class="field-group__text-input field-group__text-input--review" name="text-review" placeholder="Можно прям в красках, не стесняясь в выражениях">
           </label>
         </div>
         <button class="button form__button" type="submit">Отправить форму</button>
-        <small class="form__legend">* — Обязательные поля</small>
+        <p class="form__legend">
+          <b class="form__input-mark">*</b> — Обязательные поля
+        </p>
       </form>
     </div>
   </section>

@@ -22,3 +22,37 @@
   color: @basic-purplish-red;
   text-align: center;
 }
+
+.color-label-red() {
+  line-height: @lh-large;
+  text-transform: uppercase;
+  color: @basic-purplish-red;
+}
+
+.color-label-dark () {
+  font-size: @fs-medium;
+  line-height: @lh-large;
+  text-transform: none;
+  color: @basic-navy-blue;
+}
+
+.input-text() {
+  &::placeholder {
+    font-size: @fs-medium;
+    line-height: @lh-large;
+    color: @basic-navy-blue;
+  }
+}
+
+.btn-green() {
+  font-weight: @fw-large;
+  font-size: @fs-medium;
+  line-height: @lh-large;
+  background-color: @basic-green;
+  color: @basic-white;
+  text-transform: uppercase;
+}
+
+.bg-grey() {
+  background-color: @basic-light-gray;
+}
