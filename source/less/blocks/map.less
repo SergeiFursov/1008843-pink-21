@@ -1,13 +1,17 @@
 //Map
 
 .map {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  height: 500px;
   background-color: @basic-smoky-white;
-  outline: 5px solid green;
-  outline-offset: 5px;
 }
 
-.map__wrapper {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0;
+.map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }

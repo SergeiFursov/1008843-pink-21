@@ -14,7 +14,7 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))

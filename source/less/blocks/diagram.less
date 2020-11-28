@@ -1,0 +1,54 @@
+// Diagram
+
+.diagram {
+  display: none;
+  .bg-grey();
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    .bg-grey();
+  }
+}
+
+.diagram__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    min-height: 330px;
+    .wrapper-tablet();
+    outline: 2px solid red;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 430px;
+    .wrapper-desktop();
+  }
+}
+
+.diagram__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    outline: 2px solid blue;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 620px;
+    outline: 2px solid red;
+    outline-offset: -2px;
+  }
+}
+
+.diagram__container a {
+  @media (min-width: @tablet-width) {
+    color: @basic-purplish-red;
+  }
+}

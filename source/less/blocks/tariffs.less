@@ -3,16 +3,64 @@
 .tariffs {
   padding: 83px 0 49px 0;
   .bg-grey();
-  outline: 5px solid blueviolet;
-  outline-offset: 5px;
+  outline: 2px solid blueviolet;
+  outline-offset: -2px;
 }
 
 .tariffs__wrapper {
   width: 320px;
   margin: 0 auto;
+  overflow-x: hidden;
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+    outline: 2px solid yellow;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+    outline: 2px solid red;
+    outline-offset: -2px;
+  }
+}
+
+
+.tariffs__list {
+  width: 1120px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid @basic-gray;
+  background-color: @basic-white;
+  position: relative;
+  right: 541px;
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    left: 0;
+    right: 0;
+    outline: 2px solid yellow;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    outline: 2px solid red;
+    outline-offset: -2px;
+  }
+}
+
+th {
+  width: 276px;
 }
 
 .tariffs__item {
+  border: 2px solid @basic-gray;
   background-color: @basic-navy-blue;
 }
 
@@ -33,4 +81,10 @@
 .tariffs__tuning {
   line-height: @lh-large;
   text-transform: uppercase;
+}
+
+.tariffs__toggles {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
