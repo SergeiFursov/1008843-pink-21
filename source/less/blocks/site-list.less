@@ -1,17 +1,11 @@
 //Site Navigation
 
 .site-list {
-  list-style: none;
-}
+  outline: 2px solid greenyellow;
+  outline-offset: -2px;
 
-.site-list__item {
-  background-color: @basic-navy-blue;
-  text-align: center;
-}
-
-.site-list__link {
-  font-weight: @fw-large;
-  font-size: @fs-medium;
-  line-height: 32px;
-  text-transform: uppercase;
+  @media (min-width: @desktop-width) {
+    justify-content: flex-end;
+    background-color: red;
+  }
 }

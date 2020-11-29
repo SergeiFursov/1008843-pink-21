@@ -1,19 +1,51 @@
 .application {
-  padding: 29px 0 38px 0;
   color: @basic-white;
-  text-align: center;
-  outline: 5px solid rgba(255, 155, 155, 0.9);
-  outline-offset: 5px;
 }
 
 .application__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 667px;
+  margin: 0;
+  padding: 0;
   .wrapper();
+  outline: 2px solid green;
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: center;
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: center;
+    .wrapper-desktop();
+  }
 }
 
+.application__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: 5px solid orange;
+  outline-offset: -5px;
+}
+
+.application__image {
+  background-position: 0 100%;
+  outline: 5px solid yellowgreen;
+  outline-offset: -5px;
+}
+
+
 .application__slogan {
+  margin: 0;
   font-weight: @fw-small;
   font-size: @fs-large;
   line-height: 29px;
+  outline: 5px solid red;
+  outline-offset: -5px;
 }
 
 .application__button {
@@ -23,5 +55,6 @@
 }
 
 .application__text {
+  margin: 0;
   font-weight: @fw-small;
 }

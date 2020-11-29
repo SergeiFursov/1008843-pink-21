@@ -3,61 +3,59 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
 <header class="page-header">
-  <div class="page-header__menu">
-    <a class="page-header__logo-image">
-      <img src="img/pink.png" width="74" height="23" alt="Слово Пинк">
-    </a>
-    <nav class="main-navigation">
-      <button class="main-navigation__toggle" type="button">
-        <span>Открыть меню</span>
-      </button>
-      <div class="main-navigation__wrapper">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo-image">
+        <img src="img/pink.png" width="74" height="23" alt="Слово Пинк">
+      </a>
+      <nav class="main-navigation">
+        <button class="main-navigation__toggle" type="button">
+          <span></span>
+        </button>
         <ul class="main-navigation__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">Главная</a>
+            <a>Главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">Фотографии</a>
+            <a href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Конкурс</a>
+            <a href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a>
+            <a href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a>
           </li>
         </ul>
-      </div>
-    </nav>
-  </div>
+      </nav>
+    </div>
   <section class="application">
     <div class="application__wrapper">
       <h2 class="visually-hidden">Реклама приложения Пинк</h2>
       <p class="application__slogan">Взгляните на жизнь иначе!</p>
-      <img class="application__image" src="https://via.placeholder.com/150x100" width="150" height="100" alt="Смартфон в ладони">
+      <!-- <p>
+         <img class="application__image" src="img/phone.png" width="320" height="286" alt="Смартфон в ладони">
+       </p>-->
       <div class="application__features">
         <a class="application__button" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
         <ul class="application__list">
           <li class="application__item">
             <a class="application__icon" href="https://www.apple.com/ru/app-store">
-              <span class="visually-hidden">Логотип Айфон</span>
-              <svg></svg>
+              <img src="img/apple-logo.png" width="47" height="56" alt="Логотип Эпл">
             </a>
           </li>
           <li class="application__item">
             <a class="application__icon" href="https://play.google.com/store/apps">
-              <span class="visually-hidden">Логотип Андроид</span>
-              <svg></svg>
+              <img src="img/android-logo.png" width="43" height="47" alt="Логотип Андроид">
             </a>
           </li>
           <li class="application__item">
             <a class="application__icon" href="https://www.microsoft.com/en-us/store/apps/windows-phone">
-              <span class="visually-hidden">Логотип Майкрософт</span>
-              <svg></svg>
+              <img src="img/microsoft-logo.png" width="44" height="41" alt="Логотип Майкрософт">
             </a>
           </li>
         </ul>
@@ -69,24 +67,41 @@
 <main class="page-main">
   <h1 class="visually-hidden">Пинк-шаг в новый мир.</h1>
   <section class="advantages">
-    <div class="advantages__wrapper">
+    <div class="advantages__header">
+
       <h2 class="visually-hidden">Преимущества приложения Пинк</h2>
       <p class="advantages__text">Устали от серости мегаполиса?</p>
-      <p class="advantages__text">Нам есть, что вам предложить!</p>
-      <ul class="advantages__list">
-        <li class="advantages__item advantages__item--cheers-up">
-          <h3 class="advantages__title">Поднимает настроение</h3>
-          <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-        </li>
-        <li class="advantages__item advantages__item--changes">
-          <h3 class="advantages__title">Меняет мир вокруг</h3>
-          <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </li>
-        <li class="advantages__item advantages__item--makes">
-          <h3 class="advantages__title">Заводит новых друзей</h3>
-          <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-        </li>
-      </ul>
+      <p class="advantages__text">Нам есть, что вам<br> предложить!</p>
+
+    </div>
+    <div class="advantages__container">
+      <div class="advantages__wrapper">
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--cheers-up">
+            <h3 class="advantages__title">Поднимает настроение</h3>
+            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </li>
+          <li class="advantages__item advantages__item--changes">
+            <h3 class="advantages__title">Меняет мир вокруг</h3>
+            <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="advantages__item advantages__item--makes">
+            <h3 class="advantages__title">Заводит новых друзей</h3>
+            <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+  <section class="diagram">
+    <div class="diagram__wrapper">
+      <div class="diagram__container">
+        <h3 class="diagram__title">Эффект на 24 часа!</h3>
+        <p class="diagram__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые
+          сутки!</p>
+        <a class="diagram__link" href="#">Узнать больше об исследовании</a>
+      </div>
     </div>
   </section>
   <section class="reviews">
@@ -95,25 +110,12 @@
       <div class="reviews__list slider__list">
         <blockquote class="reviews__item slider__item">
           <div class="reviews__author-info">
-            <cite class="reviews__author-name">
-              Николай Петров
-            </cite>
+            <cite class="reviews__author-name">Николай Петров</cite>
+            <p class="reviews__author-details">25 лет, водитель трамвая</p>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
               серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </div>
         </blockquote>
-        <!--  <blockquote class="reviews__item">
-            <div class="reviews__author-info">
-              <cite class="reviews__author-name"></cite>
-              <p class="reviews__text"></p>
-            </div>
-          </blockquote>
-          <blockquote class="reviews__item">
-            <div class="reviews__author-info">
-              <cite class="reviews__author-name"></cite>
-              <p class="reviews__text"></p>
-            </div>
-          </blockquote>-->
       </div>
       <p class="reviews__toggles slider__toggles">
         <button class="slider__toggle slider__toggle--current" type="button">1</button>
@@ -125,7 +127,7 @@
   <section class="tariffs">
     <div class="tariffs__wrapper slider">
       <h2 class="visually-hidden">Комплектации и стоимость</h2>
-      <table class="tariffs__list slider__list">
+      <table class="tariffs__list">
         <tr class="tariffs__item">
           <th></th>
           <th class="tariffs__name">База
@@ -141,19 +143,19 @@
         <tr>
           <td class="tariffs__tuning">Розовый фильтр</td>
           <td>Да</td>
-          <td>Да</td>
+          <td>Розовый фильтр</td>
           <td>Да</td>
         </tr>
         <tr>
           <td class="tariffs__tuning">Смайлики</td>
           <td>Нет</td>
-          <td>Да</td>
+          <td>Смайлики</td>
           <td>Да</td>
         </tr>
         <tr>
           <td class="tariffs__tuning">Комментарии</td>
           <td>Нет</td>
-          <td>Нет</td>
+          <td>Комментарии</td>
           <td>Да</td>
         </tr>
       </table>
@@ -185,17 +187,14 @@
     </div>
   </section>
   <div class="map">
-    <div class="map__wrapper">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605982614688!5m2!1sru!2sru"
-        width="320" height="450" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6143142117494!2d30.32128786903261!3d59.93854181494334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1606566375871!5m2!1sru!2sru"
+      width="1200" height="502" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </div>
 </main>
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <a class="page-footer__logo" href="index.html">
-      <img class="page-footer__logo-image" src="https://via.placeholder.com/150x100" width="150" height="100" alt="Логотип Пинк">
+      <img class="page-footer__logo-image" src="img/logotype-blue-tablet.png" alt="Логотип Пинк">
     </a>
     <div class="page-footer__social social">
       <ul class="social__list">
@@ -213,7 +212,7 @@
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Логотип академии">
+        <img src="https://via.placeholder.com/150x100" width="15" height="10" alt="Логотип академии">
       </a>
     </div>
   </div>

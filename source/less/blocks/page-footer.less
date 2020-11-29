@@ -1,11 +1,54 @@
 // Footer
 
 .page-footer {
-  padding: 41px 0 51px 0;
-  outline: 5px solid navy;
-  outline-offset: 5px;
+  height: 284px;
+  outline: 2px solid blueviolet;
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    height: 127px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 197px;
+  }
 }
 
 .page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  padding: 41px 0 51px 0;
+  outline: 2px solid red;
+  outline-offset: -2px;
   .wrapper();
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+    height: 127px;
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 197px;
+    .wrapper-desktop();
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .wrapper-tablet();
+}
+
+.page-footer__social {
+  margin: 0;
+  outline: 2px solid deeppink;
+  outline-offset: -2px;
+}
+
+.page-footer__copyright {
+  outline: 2px solid pink;
+  outline-offset: -2px;
 }

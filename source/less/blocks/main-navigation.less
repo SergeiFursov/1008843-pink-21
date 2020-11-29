@@ -1,1 +1,40 @@
 //Main Navigation
+
+.main-navigation {
+  outline: 2px solid rgba(255, 0, 255, 0.9);
+  outline-offset: -2px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.main-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: @basic-navy-blue;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    background-color: yellow;
+  }
+}
+
+.main-navigation__list a {
+  font-weight: @fw-large;
+  font-size: @fs-medium;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.main-navigation__toggle {
+  display: inline-block;
+  border: none;
+  outline: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

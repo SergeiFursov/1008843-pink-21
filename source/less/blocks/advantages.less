@@ -1,35 +1,111 @@
 //Advantages
 
 .advantages {
+  margin: 0;
+  padding: 0;
   padding-top: 46px;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    /*.wrapper-desktop();*/
+  }
+}
+
+.advantages__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
   .bg-grey();
-  outline: 5px solid red;
-  outline-offset: 5px;
+  outline: 2px solid blue;
+  outline-offset: -2px;
+
+
+  @media (min-width: @tablet-width) {
+    /*display: flex;
+    flex-direction: row;
+    justify-content: flex-end;*/
+  }
+
+  @media (min-width: @desktop-width) {
+    outline: 2px solid darkseagreen;
+    outline-offset: -2px;
+  }
 }
 
 .advantages__wrapper {
   .wrapper();
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    outline: 2px solid yellow;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+  }
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  outline: 2px solid greenyellow;
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    height: 390px;
+  }
+
+  @media (min-width: @desktop-width) {
+    outline: 2px solid blue;
+    outline-offset: -2px;
+    display: flex;
+    flex-direction: row;
+    /*.wrapper-desktop();*/
+  }
 }
 
 .advantages__item {
-  text-align: center;
+  @media (min-width: @tablet-width) {
+    width: 320px;
+    outline: 2px solid red;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 .advantages__title {
+  margin: 0;
   font-weight: @fw-large;
   font-size: @fs-medium;
   color: @basic-black;
 }
 
 .advantages__text {
+  margin: 0;
   font-weight: @fw-small;
   font-size: @fs-large;
   line-height: 29px;
-  text-align: center;
 }
