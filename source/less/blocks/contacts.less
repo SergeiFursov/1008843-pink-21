@@ -9,6 +9,7 @@
 .contacts__wrapper {
   display: flex;
   flex-direction: column;
+  .wrapper();
 
   @media (min-width: @tablet-width) {
     .wrapper-tablet();
@@ -35,9 +36,13 @@
 }
 
 .contacts__item {
-  width: 300px;
+  width: 280px;
   outline: 2px solid black;
   outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
 }
 
 .contacts__intro {

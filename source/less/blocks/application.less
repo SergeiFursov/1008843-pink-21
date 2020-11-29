@@ -9,15 +9,18 @@
   height: 667px;
   margin: 0;
   padding: 0;
+  .wrapper();
   outline: 2px solid green;
   outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
     justify-content: center;
+    .wrapper-tablet();
   }
 
   @media (min-width: @desktop-width) {
     justify-content: center;
+    .wrapper-desktop();
   }
 }
 
