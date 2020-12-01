@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page" lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Пинк</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -14,7 +15,7 @@
     </a>
     <nav class="main-navigation">
       <button class="main-navigation__toggle" type="button">
-        <span>Открыть меню</span>
+        <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-navigation__wrapper">
         <ul class="main-navigation__list site-list">
@@ -37,119 +38,153 @@
 </header>
 <main class="page-form">
   <h1 class="visually-hidden">Заявка на конкурс</h1>
-  <section class="form-competition">
-    <div class="form-competition__wrapper">
-      <h2 class="form-competition__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
-      <p class="form-competition__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-      <form class="form" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="form__fieldset field-group">
-          <ul class="field-group__list">
-            <li class="field-group__item">
-              <label class="field-group__label">Фамилия:
-                <input class="field-group__text-input" type="text" name="user-surname" placeholder="Укажите фамилию *">
-              </label>
-            </li>
-            <li class="field-group__item">
-              <label class="field-group__label">Имя:
-                <input class="field-group__text-input" type="text" name="user-name" placeholder="Введите ваше имя *">
-              </label>
-            </li>
-            <li class="field-group__item">
-              <label class="field-group__label">Отчество:
-                <input class="field-group__text-input" type="text" name="user-patronymic" placeholder="Ну и отчество тоже">
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__fieldset field-group">
-          <legend class="field-group__legend">Ваши безбашенные достижения в путешествии</legend>
-          <ul class="field-group__list field-group__list--bg-grey">
-            <li class="field-group__item">
-              <label class="field-group__label field-group__label--dark">
-                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="took-selfie" checked>
-                Сделал селфи с акулой
-              </label>
-            </li>
-            <li class="field-group__item">
-              <label class="field-group__label field-group__label--dark">
-                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="burned-beach" checked>
-                Обгорел на пляже
-              </label>
-            </li>
-            <li class="field-group__item">
-              <label class="field-group__label field-group__label--dark">
-                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="saw-chuck-norris">
-                Видел Чака Норриса
-              </label>
-            </li>
-            <li class="field-group__item">
-              <label class="field-group__label field-group__label--dark">
-                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="bought-souvenirs">
-                Накупил сувениров
-              </label>
-            </li>
-            <li class="field-group__item">
-              <label class="field-group__label field-group__label--dark">
-                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="held-tower" checked>
-                Удержал башню
-              </label>
-            </li>
-            <li class="field-group__item">
-              <label class="field-group__label field-group__label--dark">
-                <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="trashed-hotel">
-                Разгромил отель
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__fieldset field-group">
-          <ul class="field-group__list">
-            <li class="field-group__item">
-              <label class="field-group__label">Номер телефона
-                <input class="field-group__text-input" type="tel" name="user-phone" placeholder="Номер, пожалуйста">
-              </label>
-            </li>
-            <li class="field-group__item">
-              <label class="field-group__label">Адрес почты
-                <input class="field-group__text-input" type="email" name="user-email" placeholder="Введите почту *" required>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__fieldset field-group">
-          <legend class="field-group__legend">С каким приложением путешествовали?</legend>
-          <ul class="field-group__list field-group__list--bg-grey">
-            <li class="field-group__item">
-              <label class="field-group__label field-group__label--dark">
-                <input class="visually-hidden field-group__input  field-group__input--radio" name="system-type" type="radio" value="ios" checked>
-                Pink для iOS
-              </label>
-            </li>
-            <li class="field-group__item">
-              <label class="field-group__label field-group__label--dark">
-                <input class="visually-hidden field-group__input  field-group__input--radio" name="system-type" type="radio" value="android">
-                Pink на Android
-              </label>
-            </li>
-            <li class="field-group__item">
-              <label class="field-group__label field-group__label--dark">
-                <input class="visually-hidden field-group__input  field-group__input--radio" name="system-type" type="radio" value="windows phone">
-                Windows Phone
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <div class="form__fieldset field-group">
-          <label class="field-group__label field-group__label--red">Опишите свои эмоции
-            <textarea class="field-group__text-input field-group__text-input--review" name="text-review" rows="5" cols="35"  placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          </label>
-        </div>
-        <button class="form__button" type="submit">Отправить форму</button>
-        <p class="form__legend">
-          <b class="form__input-mark">*</b> — Обязательные поля
-        </p>
-      </form>
+  <section class="contest">
+    <div class="contest__wrapper">
+      <h2 class="contest__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
+      <p class="contest__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        <span class="contest__insert"> Пожалуйста, заполните форму ниже:</span>
+      </p>
     </div>
+    <form class="form" method="post" action="https://echo.htmlacademy.ru">
+      <div class="form-field  form-field--bg-gray field-group">
+        <div class="field-group__wrapper-user">
+          <fieldset class="field-group__border field-group__border--no-border">
+            <ul class="field-group__list">
+              <li class="field-group__item">
+                <label class="field-group__label">Фамилия:
+                  <input class="field-group__text-input" type="text" name="user-surname" placeholder="Укажите фамилию *">
+                </label>
+              </li>
+              <li class="field-group__item">
+                <label class="field-group__label">Имя:
+                  <input class="field-group__text-input" type="text" name="user-name" placeholder="Введите ваше имя *">
+                </label>
+              </li>
+              <li class="field-group__item">
+                <label class="field-group__label">Отчество:
+                  <input class="field-group__text-input" type="text" name="user-patronymic" placeholder="Ну и отчество тоже">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </div>
+      <div class="form-field form-field--check-box form-field--bg-gray form-field--wide field-group">
+        <div class="field-group__wrapper-check-box">
+          <fieldset class="field-group__border">
+            <legend class="field-group__legend">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="field-group__list ">
+              <li class="field-group__item">
+                <label class="field-group__label field-group__label--dark">
+                  <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="took-selfie"
+                         checked>
+                  Сделал селфи с акулой
+                </label>
+              </li>
+              <li class="field-group__item">
+                <label class="field-group__label field-group__label--dark">
+                  <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions"
+                         value="burned-beach"
+                         checked>
+                  Обгорел на пляже
+                </label>
+              </li>
+              <li class="field-group__item">
+                <label class="field-group__label field-group__label--dark">
+                  <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions"
+                         value="saw-chuck-norris">
+                  Видел Чака Норриса
+                </label>
+              </li>
+              <li class="field-group__item">
+                <label class="field-group__label field-group__label--dark">
+                  <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions"
+                         value="bought-souvenirs">
+                  Накупил сувениров
+                </label>
+              </li>
+              <li class="field-group__item">
+                <label class="field-group__label field-group__label--dark">
+                  <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions" value="held-tower"
+                         checked>
+                  Удержал башню
+                </label>
+              </li>
+              <li class="field-group__item">
+                <label class="field-group__label field-group__label--dark">
+                  <input class="visually-hidden field-group__input field-group__input--checkbox" type="checkbox" name="user-actions"
+                         value="trashed-hotel">
+                  Разгромил отель
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </div>
+      <div class="form-field form-field--contacts form-field--wide field-group">
+        <div class="field-group__wrapper">
+          <fieldset class="field-group__border">
+            <legend class="field-group__legend field-group__legend--contacts">Контактная информация</legend>
+            <ul class="field-group__list">
+              <li class="field-group__item">
+                <label class="field-group__label">Номер телефона
+                  <input class="field-group__text-input" type="tel" name="user-phone" placeholder="Номер, пожалуйста">
+                </label>
+              </li>
+              <li class="field-group__item">
+                <label class="field-group__label">Адрес почты
+                  <input class="field-group__text-input" type="email" name="user-email" placeholder="Введите почту *" required>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </div>
+      <div class="form-field form-field--radio-btn form-field--bg-gray field-group">
+        <div class="field-group__wrapper-radio-btn">
+          <fieldset class="field-group__border">
+            <legend class="field-group__legend">С каким приложением путешествовали?</legend>
+            <ul class="field-group__list">
+              <li class="field-group__item">
+                <label class="field-group__label field-group__label--dark">
+                  <input class="visually-hidden field-group__input  field-group__input--radio" name="system-type" type="radio" value="ios" checked>
+                  Pink для iOS
+                </label>
+              </li>
+              <li class="field-group__item">
+                <label class="field-group__label field-group__label--dark">
+                  <input class="visually-hidden field-group__input  field-group__input--radio" name="system-type" type="radio" value="android">
+                  Pink на Android
+                </label>
+              </li>
+              <li class="field-group__item">
+                <label class="field-group__label field-group__label--dark">
+                  <input class="visually-hidden field-group__input  field-group__input--radio" name="system-type" type="radio" value="windows phone">
+                  Windows Phone
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </div>
+      <div class="form-field form-field--review form-field--wide field-group">
+        <div class="field-group__wrapper">
+          <fieldset class="field-group__border">
+            <legend class="field-group__legend">Опишите свои эмоции</legend>
+            <label>
+               <textarea class="field-group__text-input field-group__text-input--review" name="text-review"
+                         placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </label>
+          </fieldset>
+        </div>
+      </div>
+      <div class="form-field form-field__submit field-group">
+        <div class="field-group__wrapper-button">
+          <button class="field-group__button" type="submit">Отправить форму</button>
+          <p class="field-group__legend"><b class="field-group__legend-mark">*</b> — Обязательные <span class="field-group__insert">для заполнения</span> поля</p>
+        </div>
+      </div>
+    </form>
   </section>
 </main>
 <footer class="page-footer">
@@ -178,6 +213,7 @@
     </div>
   </div>
 </footer>
+<!--
 <section class="modal modal__error">
   <div class="modal__wrapper">
     <h3 class="modal__title">Что-то пошло не так!</h3>
@@ -194,3 +230,4 @@
 </section>
 </body>
 </html>
+-->

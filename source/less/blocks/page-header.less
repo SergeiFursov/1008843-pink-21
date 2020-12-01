@@ -2,17 +2,18 @@
 
 .page-header {
   height: 733px;
-  /*background: url("../img/back-mobile.jpg") no-repeat 0 0;*/
+  background: url("../img/back-mobile.jpg") no-repeat 0 0;
   background-color: @basic-navy-blue;
 
   @media (min-width: @desktop-width) {
-    min-height: 853px;
+    height: 853px;
   }
 }
 
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
+  margin: 0;
   .wrapper();
 
   @media (min-width: @tablet-width) {
@@ -32,6 +33,7 @@
   outline: 2px solid orangered;
   outline-offset: -2px;
   background-color: yellow;
+  height: 66px;
 
   @media (min-width: @tablet-width) {
     height: 110px;
