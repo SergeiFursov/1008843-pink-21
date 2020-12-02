@@ -1,7 +1,9 @@
+
 .field-group__border {
   margin: 0;
   padding: 0;
   border: none;
+  background-color: pink;
 
   @media (min-width: @tablet-width) {
     border: 2px solid @basic-gray;
@@ -23,15 +25,54 @@
 }
 
 .field-group__wrapper {
-  margin: 0;
+  .wrapper();
 
 
   @media (min-width: @tablet-width) {
-    /*.wrapper-tablet();*/
+    width: 620px;
+    margin: 0;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
-    /*.wrapper-desktop();*/
+    width: 940px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.field-group__wrapper-user {
+  .wrapper();
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 435px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.field-group__wrapper-radio-btn {
+  .wrapper();
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    margin: 0;
+    padding: 0;
+    order: 2;
+    /*background-color: blue;*/
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 435px;
+    margin: 0;
+    padding: 0;
+    order: 2;
   }
 }
 
@@ -64,20 +105,20 @@
 }
 
 .field-group__wrapper-button {
-    @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     width: 620px;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
+    outline: 1px solid green;
+    outline-offset: -1px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     width: 940px;
   }
 }
-
-/*.field-group__button {
-  .btn-green();
-}*/
 
 .field-group__insert {
   display: none;
