@@ -2,6 +2,9 @@
 
 .page-footer {
   height: 284px;
+  outline: 2px solid firebrick;
+  outline-offset: -2px;
+
 
   @media (min-width: @tablet-width) {
     height: 127px;
@@ -16,9 +19,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 0;
-  padding: 41px 0 51px 0;
-  .wrapper();
+  margin: 0 auto;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -31,11 +33,6 @@
     height: 197px;
     .wrapper-desktop();
   }
-}
-
-
-@media (min-width: @tablet-width) {
-  .wrapper-tablet();
 }
 
 .page-footer__social {
