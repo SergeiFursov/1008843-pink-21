@@ -1,9 +1,9 @@
 // Page
 
-* {
+/** {
   outline: 1px solid red;
   outline-offset: -1px;
-}
+}*/
 
 .page {
   height: 100vh;
@@ -15,6 +15,9 @@
 }
 
 .page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   min-height: 100vh;
   margin: 0;
   color: @basic-navy-blue;
