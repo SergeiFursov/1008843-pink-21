@@ -1,25 +1,127 @@
 // Form
-
 .form {
-  outline: 5px solid red;
-  outline-offset: 5px;
+  display: flex;
+  flex-direction: column;
+  outline: 2px solid blue;
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .wrapper-desktop();
+  }
 }
 
-.form__fieldset {
+.form__fields {
+  margin: 0;
+  padding: 0;
   border: none;
-  outline: 5px solid orange;
-  outline-offset: 5px;
+  background-color: yellow;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 70px 0;
+    padding: 0;
+    border: 2px solid @basic-gray;
+    border-radius: 1px;
+  }
 }
 
-.form__legend {
-  line-height: @lh-large;
-  text-transform: uppercase;
+.form__title {
+  .wrapper();
+  font-weight: @fw-small;
+  font-size: @fs-large;
+  line-height: 33px;
+  text-align: center;
+  color: @basic-white;
+  background-color: @basic-navy-blue;
+
+  @media (min-width: @tablet-width) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    .wrapper-desktop();
+  }
 }
 
-.form__input-mark {
-  color: @basic-purplish-red;
+.form__description {
+  text-align: center;
+  .wrapper();
+
+  @media (min-width: @tablet-width) {
+    padding: 100px 65px 82px 65px;
+    font-size: @fs-medium;
+    line-height: @lh-large;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 92px 95px 92px;
+  }
 }
 
 .form__button {
+  margin: 0;
+  padding: 0;
   .btn-green();
+}
+
+.form__wrapper-button {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .wrapper();
+  text-align: center;
+  box-sizing: border-box;
+  background-color: pink;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    order: 5;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
+}
+
+.form__insert {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
+.form__text-required {
+  margin: 0 0 26px 0;
+  padding: 0;
+  line-height: @lh-large;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.form__text-insert {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
 }

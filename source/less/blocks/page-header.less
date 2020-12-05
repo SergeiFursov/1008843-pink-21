@@ -1,22 +1,28 @@
-//Header
+// Main Header
 
 .page-header {
-  height: 733px;
-  /*background: url("../img/back-mobile.jpg") no-repeat 0 0;*/
+  height: 533px;
   background-color: @basic-navy-blue;
 
+  @media (min-width: @tablet-width) {
+    height: 553px;
+  }
+
   @media (min-width: @desktop-width) {
-    min-height: 853px;
+    height: 353px;
   }
 }
 
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
-  .wrapper();
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.3);
 
   @media (min-width: @tablet-width) {
-    .wrapper-tablet();
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -29,9 +35,10 @@
 }
 
 .page-header__logo-image {
-  outline: 2px solid orangered;
-  outline-offset: -2px;
-  background-color: yellow;
+  outline: 1px solid yellow;
+  outline-offset: -1px;
+  height: 63px;
+
 
   @media (min-width: @tablet-width) {
     height: 110px;

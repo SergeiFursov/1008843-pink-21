@@ -1,0 +1,40 @@
+.field-user {
+  @media (min-width: @desktop-width) {
+    width: 435px;
+  }
+}
+
+.field-user__list {
+  list-style: none;
+  .wrapper();
+
+  @media (min-width: @tablet-width) {
+    .indents-zero();
+  }
+}
+
+.field-user__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.field-user__label {
+  margin: 0 0 17px 20px;
+  .label-red();
+
+  @media (min-width: @tablet-width) {
+    margin: 0 20px 0 0;
+    align-self: center;
+  }
+}
+
+.field-user__text {
+  width: 100%;
+  margin: 0;
+  padding: 22px 0 22px 20px;
+  box-sizing: border-box;
+  /* width: 280px;*/
+  /*  box-sizing: border-box;*/
+  .input-text();
+}

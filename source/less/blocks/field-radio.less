@@ -1,0 +1,37 @@
+.field-radio {
+  .bg-grey();
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 435px;
+    background-color: yellow;
+  }
+}
+
+.field-radio__title {
+  .title-legend();
+  .bg-grey();
+}
+
+.field-radio__list {
+  .wrapper();
+
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 62px;
+  }
+}
+
+.field-radio__item {
+  margin-bottom: 40px;
+}
+
+.field-radio__label {
+  padding-left: 59px;
+  .label-dark();
+}

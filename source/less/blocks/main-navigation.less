@@ -1,24 +1,14 @@
 //Main Navigation
 
 .main-navigation {
-  outline: 2px solid rgba(255, 0, 255, 0.9);
-  outline-offset: -2px;
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    align-items: center;
-  }
+  /*outline: 2px solid rgba(255, 0, 255, 0.9);
+  outline-offset: -2px;*/
+  top: -100px;
 }
 
 .main-navigation__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background-color: @basic-navy-blue;
-
   @media (min-width: @desktop-width) {
-    display: flex;
-    background-color: yellow;
+    //display: flex;
   }
 }
 
@@ -30,11 +20,10 @@
 }
 
 .main-navigation__toggle {
-  display: inline-block;
-  border: none;
-  outline: none;
+  position: absolute;
+  right: 50px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     display: none;
   }
 }
