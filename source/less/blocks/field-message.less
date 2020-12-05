@@ -1,14 +1,27 @@
+.field-message {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    order: 4;
+    /*margin: 0 0 70px 0;*/
+    padding: 47px 62px 53px;
+  }
+}
+
 .field-message__title {
-  padding: 42px 0 22px 0;
+  /*padding: 42px 0 22px 0;*/
   .title-legend();
 }
 
 .field-message__text {
   width: 100%;
+  /*margin: 0 0 52px 0;*/
   padding: 22px 25px 0 20px;
   box-sizing: border-box;
   min-height: 197px;
-  margin: 0 0 52px 0;
   .input-text();
 
   @media (min-width: @desktop-width) {

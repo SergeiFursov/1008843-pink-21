@@ -1,15 +1,26 @@
 .field-radio {
   .bg-grey();
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+    order: 1;
+  }
 }
 
 .field-radio__title {
-  padding: 42px 0 44px 0;
+ /* padding: 42px 0 44px 0;*/
   .title-legend();
   .bg-grey();
 }
 
 .field-radio__list {
-  .reset-list();
+  .wrapper();
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 62px;
+  }
+
 }
 
 .field-radio__item {

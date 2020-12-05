@@ -1,18 +1,21 @@
 .field-checkbox {
   .bg-grey();
-  /* padding: 0;
-   margin: 42px 31px 44px*/
+  outline: 2px solid red;
+  outline-offset: -2px;
+
   @media (min-width: @tablet-width) {
     background-color: @basic-white;
+    /*margin: 0 0 70px 0;*/
     padding: 55px 60px;
+    order: 3;
   }
 }
 
 .field-checkbox__title {
   display: block;
-  padding-top: 42px;
+  padding: 0;
+  margin-top: 42px;
   .title-legend();
-  .bg-grey();
 
   @media (min-width: @tablet-width) {
     background-color: @basic-white;
@@ -20,8 +23,15 @@
 }
 
 .field-checkbox__list {
-  .reset-list();
-  padding: 44px 0;
+  .wrapper();
+  list-style: none;
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+  }
 
 
   @media (min-width: @desktop-width) {
