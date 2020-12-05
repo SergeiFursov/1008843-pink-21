@@ -5,6 +5,11 @@
     background-color: @basic-white;
     order: 1;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 435px;
+    background-color: yellow;
+  }
 }
 
 .field-radio__title {
@@ -14,6 +19,7 @@
 
 .field-radio__list {
   .wrapper();
+
   list-style: none;
 
   @media (min-width: @tablet-width) {

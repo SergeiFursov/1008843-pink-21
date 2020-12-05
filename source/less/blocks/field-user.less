@@ -1,14 +1,16 @@
 .field-user {
   @media (min-width: @desktop-width) {
     width: 435px;
-    margin: 0;
-    padding: 0;
   }
 }
 
 .field-user__list {
   list-style: none;
   .wrapper();
+
+  @media (min-width: @tablet-width) {
+    .indents-zero();
+  }
 }
 
 .field-user__item {

@@ -10,6 +10,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     .wrapper-desktop();
   }
 }
@@ -37,8 +40,17 @@
   color: @basic-white;
   background-color: @basic-navy-blue;
 
+  @media (min-width: @tablet-width) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
   @media (min-width: @desktop-width) {
+    position: absolute;
     top: 150px;
+    left: 0;
+    right: 0;
+    .wrapper-desktop();
   }
 }
 
@@ -48,11 +60,13 @@
 
   @media (min-width: @tablet-width) {
     padding: 100px 65px 82px 65px;
+    font-size: @fs-medium;
+    line-height: @lh-large;
   }
 
   @media (min-width: @desktop-width) {
     padding: 100px 92px 95px 92px;
-    line-height: @lh-large;
+
   }
 }
 

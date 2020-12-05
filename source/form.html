@@ -70,7 +70,7 @@
             </label>
           </li>
           <li class="field-checkbox__item">
-            <label class="field-checkbox__labell">
+            <label class="field-checkbox__label">
               <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="burned-beach" checked>
               Обгорел на пляже
             </label>
@@ -138,10 +138,13 @@
         </ul>
       </fieldset>
       <fieldset class="form__fields field-message">
+        <div class="field-message__wrapper">
+          <label>
+            <textarea class="field-message__text" name="text-message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </label>
+        </div>
         <legend class="field-message__title">Опишите свои эмоции</legend>
-        <label>
-          <textarea class="field-message__text" name="text-message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-        </label>
+
       </fieldset>
       <div class="form__wrapper-button">
         <button class="form__button" type="submit">Отправить форму</button>
