@@ -1,12 +1,108 @@
-.upload-photo__intro,
-.upload-photo__description {
+.upload-photo {
+  outline: #d22856 solid 2px;
+  outline-offset: -2px;
+  display: flex;
+  flex-direction: column;
+  background-color: navajowhite;
+  margin-top: 50px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 73px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 67px;
+  }
+}
+
+.upload-photo__intro {
+  margin: 0 auto;
+  padding: 0 20px 52px 20px;
   line-height: @lh-large;
+  align-items: center;
+  text-align: center;
+  outline: blue solid 2px;
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto 75px auto;
+    padding: 0 10px;
+  }
 }
 
-.upload-photo__post-button {
+.upload-photo__form {
+  .bg-grey();
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua;*/
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    .wrapper-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+  }
+}
+
+.upload-photo__image {
+  .wrapper();
+  width: 100%;
+  height: 375px;
+  margin-bottom: 45px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+}
+
+.upload-photo__image-user {
+  outline: orchid solid 2px;
+  outline-offset: -2px;
+}
+
+.upload-photo__box {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.upload-photo__list {
+  list-style: none;
+  .wrapper();
+  outline: pink solid 2px;
+  outline-offset: -2px;
+}
+
+.upload-photo__button {
+  width: 100%;
+  height: 55px;
+  box-sizing: border-box;
+
+  @media (min-width: @desktop-width) {
+    width: 183px;
+  }
+}
+
+.upload-photo__button--send {
   .btn-red();
+  margin-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 44px;
+  }
 }
 
-.upload-photo__cancel-button {
+.upload-photo__button--cancel {
+  margin-bottom: 40px;
   .btn-grey();
 }
