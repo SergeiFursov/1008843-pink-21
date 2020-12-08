@@ -3,140 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Пинк</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
 <header class="page-header">
-  <a class="page-header__logo">
-    <img class="page-header__logo-image" src="https://via.placeholder.com/150x100" width="150" height="100" alt="Логотип Пинк">
-  </a>
-  <nav class="main-navigation">
-    <button class="main-navigation__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
-    <div class="main-navigation__wrapper">
-      <ul class="main-navigation__list site-list">
-        <li class="site-list__item">
-          <a class="site-list__link" href="index.html">Главная</a>
-        </li>
-        <li class="site-list__item site-list__item--active">
-          <a class="site-list__link">Фотографии</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="form.html">Конкурс</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div class="page-header__wrapper">
+    <a class="page-header__logo">
+      <img class="page-header__logo-image" src="https://via.placeholder.com/150x100" width="150" height="100" alt="Логотип Пинк">
+    </a>
+    <nav class="main-navigation">
+      <button class="main-navigation__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-navigation__wrapper">
+        <ul class="main-navigation__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </header>
+
 <main class="page-photo">
   <h1 class="page-photo__title">Фотографии пользователей</h1>
   <section class="photo">
-    <div class="photo__wrapper">
-      <h2 class="visually-hidden photo__title">Каталог фотографий</h2>
-      <p class="photo__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-      <ul class="photo__list">
-        <li class="photo__item item-user">
-          <h3 class="item-user__name">Анна<span class="item-user__counter">(5 минут назад)</span></h3>
-          <p class="item-user__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои
-            вопросы!</p>
-          <a class="item-user__link" href="#">
-            <img class="item-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
-          </a>
-          <p class="item-user__like">Нравится: 215</p>
-          <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>
-        </li>
-        <li class="photo__item item-user">
-          <h3 class="item-user__name">Левон<span class="item-user__counter">(5 часов  назад)</span></h3>
-          <p class="item-user__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-          <a class="item-user__link" href="#">
-            <img class="item-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
-          </a>
-          <p class="item-user__like">Нравится: 356</p>
-          <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>
-        </li>
-        <li class="photo__item item-user">
-          <h3 class="item-user__name">Антон<span class="item-user__counter">(12 часов  назад)</span></h3>
-          <p class="item-user__description">Соседи будут рады!</p>
-          <a class="item-user__link" href="#">
-            <img class="item-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
-          </a>
-          <p class="item-user__like">Нравится: 666</p>
-          <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>
-        </li>
-        <li class="photo__item item-user">
-          <h3 class="item-user__name">Борис<span class="item-user__counter">(20 часов  назад)</span></h3>
-          <p class="item-user__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
-          <a class="item-user__link" href="#">
-            <img class="item-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
-          </a>
-          <p class="item-user__like">Нравится: 215</p>
-          <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>
-        </li>
-        <li class="photo__item item-user">
-          <h3 class="item-user__name">Сергей<span class="item-user__counter">(20 часов  назад)</span></h3>
-          <p class="item-user__description">Самая кубанская в мире!</p>
-          <a class="item-user__link" href="#">
-            <img class="item-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
-          </a>
-          <p class="item-user__like">Нравится: 4</p>
-          <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>
-        </li>
-        <li class="photo__item item-user">
-          <h3 class="item-user__name">Максим<span class="item-user__counter">(40 часов  назад)</span></h3>
-          <p class="item-user__description">Где снег-то?</p>
-          <a class="item-user__link" href="#">
-            <img class="item-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
-          </a>
-          <p class="item-user__like">Нравится: 150</p>
-          <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>
-        </li>
-        <li class="photo__item item-user">
-          <h3 class="item-user__name">Надежда<span class="item-user__counter">(40 часов  назад)</span></h3>
-          <p class="item-user__description">Всем GM и взаимные лайки!</p>
-          <a class="item-user__link" href="#">
-            <img class="item-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
-          </a>
-          <p class="item-user__like">Нравится: 2560</p>
-          <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>
-        </li>
-      </ul>
-    </div>
+    <h2 class="visually-hidden photo__title">Каталог фотографий</h2>
+    <p class="photo__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+    <a class="photo__link-hit" href="#">
+      <img class="photo__image-hit" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
+    </a>
+    <!--  <div class="photo__item photo__item&#45;&#45;current box-hit">
+        <h3 class="box-hit__user-name">Анна<span class="time-counter">(5 минут назад)</span></h3>
+        <p class="box-hit__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои
+          вопросы!
+        </p>
+        <p class="box-hit__wrapper">
+        <button class="box-hit__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>
+        <span class="box-hit__text">Нравится: 215</span>
+        </p>
+      </div>-->
+    <ul class="photo__list">
+      <li class="photo__item photo__item--current card-user">
+        <!-- <div class="card-user__wrapper">-->
+        <!-- <div class="card-user__inner">-->
+        <h3 class="card-user__name">Анна<span class="time-counter">(5 минут назад)</span></h3>
+        <p class="card-user__description card-user__description--bottom">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе,
+          задавайте свои
+          вопросы!</p>
+        <!-- </div>-->
+        <!-- <p class="item-user__wrapper">-->
+        <!--<button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>-->
+        <p class="card-user__like">Нравится: 356</p>
+        <!--</p> -->
+        <!-- </div>-->
+      </li>
+      <li class="photo__item card-user">
+        <a class="card-user__link" href="#">
+          <img class="card-user__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt=""/>
+        </a>
+        <!-- <div class="card-user__wrapper">
+           <div class="card-user__inner">-->
+        <h3 class="card-user__name">Левон<span class="time-counter">(5 часов назад)</span></h3>
+        <p class="card-user__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+        <!-- </div>-->
+        <!-- <p class="item-user__wrapper">-->
+        <!--<button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>-->
+        <p class="card-user__like">Нравится: 356</p>
+        <!--</p> -->
+        <!-- </div>-->
+      </li>
+      <li class="photo__item card-user">
+        <a class="card-user__link" href="#">
+          <img class="card-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
+        </a>
+        <!--<div class="card-user__wrapper">
+          <div class="card-user__inner">-->
+        <h3 class="card-user__name">Антон<span class="time-counter">(12 часов назад)</span></h3>
+        <p class="card-user__description">Соседи будут рады!</p>
+        <!-- </div>-->
+        <!--<p class="item-user__wrapper">-->
+        <!-- <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>-->
+        <p class="card-user__like">Нравится: 666</p>
+        <!--   </p>-->
+        <!-- </div>-->
+      </li>
+      <li class="photo__item card-user">
+        <a class="card-user__link" href="#">
+          <img class="card-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
+        </a>
+        <div class="card-user__wrapper">
+          <div class="card-user__inner">
+            <h3>Борис<span class="time-counter">(20 часов назад)</span></h3>
+            <p class="card-user__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+          </div>
+          <!-- <p class="item-user__wrapper">-->
+          <!--  <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>-->
+          <p class="card-user__like">Нравится: 215</p>
+          <!-- </p>-->
+        </div>
+      </li>
+      <li class="photo__item card-user">
+        <a class="card-user__link" href="#">
+          <img class="card-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
+        </a>
+        <div class="card-user__wrapper">
+          <div class="card-user__inner">
+            <h3>Сергей<span class="time-counter">(25 часов назад)</span></h3>
+            <p class="card-user__description">Самая кубанская в мире!</p>
+          </div>
+          <!--<p class="item-user__wrapper">
+            <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>-->
+          <p class="card-user__like">Нравится: 4</p>
+          <!--</p>-->
+        </div>
+      </li>
+      <li class="photo__item card-user">
+        <a class="card-user__link" href="#">
+          <img class="card-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
+        </a>
+        <div class="card-user__wrapper">
+          <div class="card-user__inner">
+            <h3>Максим<span class="time-counter">(40 часов назад)</span></h3>
+            <p class="card-user__description">Где снег-то?</p>
+          </div>
+          <!--  <p class="item-user__wrapper">
+              <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>-->
+          <p class="card-user__like">Нравится: 150</p>
+          <!--</p>-->
+        </div>
+      </li>
+      <li class="photo__item card-user">
+        <a class="card-user__link" href="#">
+          <img class="card-user__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
+        </a>
+        <div class="card-user__wrapper">
+          <div class="card-user__inner">
+            <h3>Надежда<span class="time-counter">(40 часов назад)</span></h3>
+            <p class="card-user__description">Всем GM и взаимные лайки!</p>
+          </div>
+          <!--p class="item-user__wrapper">
+            <button class="item-user__button-like" type="button"><span class="visually-hidden">Сердечко</span></button>-->
+          <p class="card-user__like">Нравится: 2560</p>
+          <!-- </p>-->
+        </div>
+    </ul>
   </section>
   <section class="upload-photo">
-    <div class="upload-photo__wrapper">
-      <h2 class="visually-hidden">Инструмент загрузки фотографии</h2>
-      <p class="upload-photo__intro">Затмите их всех!</p>
-      <p class="upload-photo__description">Выкладывайте все, что накопилось в телефоне!</p>
-      <p class="upload-photo__image">
-        <img class="upload-photo__image-user" src="https://via.placeholder.com/150x150" width="150" height="100" alt=""/>
-      </p>
-      <ul class="upload-photo__list setting-list">
-        <li class="setting-list__item setting-list__item--active">
-          <span class="visually-hidden">Обрезать</span><svg class="setting-list__icon setting-list__icon--corp"></svg>
-        </li>
-        <li class="setting-list__item">
-          <span class="visually-hidden">Заливка</span>
-          <svg class="setting-list__icon setting-list__icon--fill"></svg>
-        </li>
-        <li class="setting-list__item">
-          <span class="visually-hidden">Контраст</span>
-          <svg class="setting-list__icon setting-list__icon--contrast"></svg>
-        </li>
-      </ul>
-      <div class="upload-photo__range-control">
-        <div class="upload-photo__scale">
-          <div class="upload-photo__toggle"></div>
-        </div>
+    <h2 class="visually-hidden">Инструмент загрузки фотографии</h2>
+    <p class="upload-photo__intro">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+    <form class="upload-photo__form" method="post" action="https://echo.htmlacademy.ru">
+      <input type="image" class="upload-photo__image" src="https://via.placeholder.com/150x150" width="150" height="100" alt="#"/>
+      <div class="upload-photo__box">
+        <ul class="upload-photo__list panel">
+          <li  class="panel__item panel__item--active">
+            <img class="panel__icon-corp" src="img/fill.jpg" width="31" height="31" alt="#">
+          </li>
+          <li class="panel__item" >
+            <img class="icon-fill" src="img/fill.jpg" width="31" height="31" alt="#">
+          </li>
+          <li class="panel__item">
+            <img class="icon-contrast" src="img/fill.jpg" width="31" height="31" alt="#">
+          </li>
+        </ul>
+        <ul class="upload-photo__list controls">
+          <li class="controls__range controls__range--active">
+            <label for="corp">
+              <span class="visually-hidden">Обрезать</span>
+            </label>
+            <input class="controls__scale" type="range" id="corp">
+          </li>
+          <li class="controls__range">
+            <label for="fill">
+              <span class="visually-hidden">Заливка</span>
+            </label>
+            <input class="scale" type="range" id="fill">
+          </li>
+          <li  class="controls__range">
+            <label for="contrast">
+              <span class="visually-hidden">Заливка</span>
+            </label>
+            <input class="scale" type="range" id="contrast">
+          </li>
+        </ul>
+        <button class="upload-photo__button upload-photo__button--send" type="submit">Запостить</button>
+        <button class="upload-photo__button upload-photo__button--cancel" type="reset">Отмена</button>
       </div>
-    </div>
-    <div class="upload-photo__string"></div>
-    <button class="upload-photo__post-button" type="submit">Запостить</button>
-    <button class="upload-photo__cancel-button" type="reset">Отмена</button>
+    </form>
   </section>
 </main>
 <footer class="page-footer">
