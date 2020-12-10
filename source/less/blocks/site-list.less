@@ -1,12 +1,11 @@
 //Site Navigation
 
 .site-list {
-  /* position: absolute;*/
-  outline: 2px solid green;
+  text-align: center;
+  align-items: center;
+  z-index: 6;
+  outline: 2px solid yellow;
   outline-offset: -2px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 
   @media (min-width: @tablet-width) {
     /*height: 365px;*/
@@ -20,7 +19,13 @@
 }
 
 .site-list__item {
-  height: 63px;
-  outline: 1px solid blue;
-  outline-offset: -1px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-shadow: 0 1px 0 @basic-black, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  background-color: @basic-navy-blue;
+}
+
+.site-list__link {
+  display: block;
+  padding: 23px 0;
 }

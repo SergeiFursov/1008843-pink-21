@@ -1,57 +1,105 @@
 .application {
-  color: @basic-white;
-}
-
-.application__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 667px;
-  margin: 0;
+ /* height: 733px;*/
+  position: relative;
+  margin: -69px 0 0 0;
   padding: 0;
-  .wrapper();/*
-  outline: 2px solid green;
-  outline-offset: -2px;*/
+  color: @basic-white;
+  text-align: center;
+  outline: 5px solid green;
+  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
-    justify-content: center;
-    .wrapper-tablet();
+    height: 729px;
+    margin: -110px 0 0 0;
   }
+}
 
-  @media (min-width: @desktop-width) {
-    justify-content: center;
-    .wrapper-desktop();
+.application__header {
+  display: flex;
+  flex-direction: column;
+  height: 733px;
+  margin: 0 auto;
+  padding: 0;
+  background: url("../../img/back-mobile.jpg") no-repeat 50% 0;
+  z-index: 5;
+  .outline();
+
+  @media (min-width: @tablet-width) {
+  /*  flex-direction: row;
+    flex-wrap: wrap;*/
+  /*  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;*/
+    height: 729px;
+    background-size: cover;
+  }
+}
+
+.application__features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 271px;
+  .wrapper();
+  background-color: @basic-navy-blue;
+  order: 2;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    background-color: transparent;
   }
 }
 
 .application__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  outline: 5px solid orange;
-  outline-offset: -5px;
+  display: flex;
+  .reset-list();
+  justify-content:space-evenly;
+  align-items: center;
 }
 
 .application__image {
-  background-position: 0 100%;
-  outline: 5px solid yellowgreen;
-  outline-offset: -5px;
+ /* align-self: flex-end;*/
+ /* margin: 0;
+  padding: 0;*/
+  order: 1;
+  background: url("../../img/screen.png") no-repeat 50% 36%;
+
+  @media (min-width: @tablet-width) {
+   /* background: url("../../img/screen-tablet.jpg") no-repeat;*/
+
+  }
 }
 
-
 .application__slogan {
-  margin: 0;
+  margin: 84px auto 34px auto;
+  padding: 0 20px;
   font-weight: @fw-small;
   font-size: @fs-large;
   line-height: 29px;
-  outline: 5px solid red;
-  outline-offset: -5px;
+  z-index: 10;
+  outline-offset: -2px;
+  outline: 2px solid orangered;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 127px;
+    margin: 0;
+    padding: 0 20px;
+  }
 }
 
 .application__button {
+  display: block;
+  width: 100%;
+  padding: 21px 0;
+  box-sizing: border-box;
   font-weight: @fw-large;
   font-size: @fs-medium;
   line-height: @lh-small;
+  border: 3px solid @basic-white;
+  border-radius: 29px;
 }
 
 .application__text {
