@@ -1,7 +1,6 @@
 .application {
   display: flex;
   flex-direction: column;
- /* height: 733px;*/
   position: relative;
   margin: -69px 0 0 0;
   padding: 0;
@@ -27,11 +26,6 @@
   .outline();
 
   @media (min-width: @tablet-width) {
-  /*  flex-direction: row;
-    flex-wrap: wrap;*/
-  /*  display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;*/
     height: 729px;
     background-size: cover;
   }
@@ -55,21 +49,13 @@
 .application__list {
   display: flex;
   .reset-list();
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .application__image {
- /* align-self: flex-end;*/
- /* margin: 0;
-  padding: 0;*/
   order: 1;
   background: url("../../img/screen.png") no-repeat 50% 36%;
-
-  @media (min-width: @tablet-width) {
-   /* background: url("../../img/screen-tablet.jpg") no-repeat;*/
-
-  }
 }
 
 .application__slogan {
