@@ -8,7 +8,6 @@
   width: 320px;
   height: 385px;
   margin: -48px auto 0 auto;
-  background-color: #d22856;
   padding: 125px 0 0 0;
   //overflow: hidden;
   //.bg-grey();
@@ -31,14 +30,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 940px;
+    //width: 940px;
     height: 534px;
-    margin: 0;
-    padding: 0 10px;
-    //background: url("../../img/grey-background-desctop.png");
-    //background-repeat: no-repeat;
-    //background-position: 0 0;
-    //background-size: cover;
+    //margin: 0;
+    //padding: 0 10px;
+    background: url("../../img/grey-background-desctop.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
   }
 }
 
@@ -57,8 +56,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 1200px;
-    padding: 159px 0 0 0;
+    //max-width: 1200px;
+    width: 940px;
+    margin: 0 auto;
+    padding: 159px 10px 0 10px;
   }
 }
 
@@ -73,16 +74,16 @@
 
 
   @media (min-width: @tablet-width) {
-    //width: 100%;
-    //margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
     //padding: 0 20px;
     transform: none;
   }
 
   @media (min-width: @desktop-width) {
     //width: 940px;
-    margin: 0;
-    padding: 0;
+    //margin: 0 auto;
+    //padding: 0 10px;
   }
 }
 
