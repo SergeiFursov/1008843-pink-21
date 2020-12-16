@@ -95,7 +95,7 @@
     //width: 940px;
     margin: 0;
     padding: 0;
-    background: url("../../img/grey-background-desctop.png");
+    background: url("../../img/background-adv.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
@@ -184,7 +184,16 @@
   }
 }
 
+
+.br-mobile {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .br-tablet {
+  display: none;
+
   @media (min-width: @tablet-width) {
     display: block;
   }
@@ -195,6 +204,8 @@
 }
 
 .br-desktop {
+  display: none;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -226,7 +237,6 @@
 .advantages__item--makes {
   @media (min-width: @desktop-width) {
     //position: relative;
-
     //background: url("../../img/iphone 3.png") no-repeat 0 0;
     //width: 186px;
     //height: 382px;

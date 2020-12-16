@@ -14,11 +14,13 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
+    background-color: @basic-navy-blue;
   }
 
   @media (min-width: @desktop-width) {
     margin: -110px 0 0 0;
-    background: url("../../img/back-desktop.jpg") no-repeat 50% 50%;
+    background: url("../../img/back-desktop.jpg") no-repeat 50% 0;
+    background-color: @basic-navy-blue;
   }
 }
 
@@ -50,7 +52,7 @@
     .wrapper-desktop();
     justify-content: flex-start;
     height: 852px;
-    background: url("../../img/phone-desctop.png") no-repeat 25px 100%;
+    background: url("../../img/phone-desctop.png") no-repeat 25px 100%, url("../../img/screen-desktop.jpg") no-repeat 82% 61%;
   }
 }
 
