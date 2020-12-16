@@ -2,15 +2,22 @@
 
 .diagram {
   display: none;
-  .bg-grey();
 
   @media (min-width: @tablet-width) {
-    display: block;
+    //display: block;
     background-color: @basic-white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    min-height: 330px;
+    .wrapper-tablet();
   }
 
   @media (min-width: @desktop-width) {
     .bg-grey();
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
   }
 }
 
@@ -20,30 +27,66 @@
     flex-direction: row;
     justify-content: flex-end;
     min-height: 330px;
-    .wrapper-tablet();
-    outline: 2px solid red;
-    outline-offset: -2px;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 430px;
-    .wrapper-desktop();
+    //.wrapper-desktop();
+    //padding: 0;
   }
 }
 
 .diagram__container {
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-    width: 320px;
-    outline: 2px solid blue;
-    outline-offset: -2px;
+    width: 310px;
+    min-height: 330px;
+    //.wrapper-tablet();
+    //display: flex;
+    //flex-direction: column;
   }
 
   @media (min-width: @desktop-width) {
-    width: 620px;
+    width: 570px;
+    margin: 0;
+    padding: 0;
     outline: 2px solid red;
     outline-offset: -2px;
+  }
+}
+
+.diagram__title {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 96px 0 10px 0;
+    font-weight: @fw-large;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  br {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.diagram__description {
+  margin: 0;
+  padding: 0 0 10px 0;
+  background-color: #d22856;
+
+  @media (min-width: @tablet-width) {
+    .br-diagram-desc {
+      display: none;
+    }
+
+    padding: 0 0 45px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .br-diagram-tablet {
+      display: none;
+    }
   }
 }
 

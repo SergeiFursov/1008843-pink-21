@@ -1,48 +1,130 @@
+//Application
+
 .application {
-  display: flex;
-  flex-direction: column;
-  position: relative;
   margin: -69px 0 0 0;
   padding: 0;
   color: @basic-white;
-  text-align: center;
-  outline: 5px solid green;
-  outline-offset: -5px;
+  background: url("../../img/back-mobile.jpg") no-repeat 50% 0, @basic-navy-blue;
+  background-size: contain;
 
   @media (min-width: @tablet-width) {
-    height: 729px;
     margin: -110px 0 0 0;
+    background: url("../../img/back-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: -110px 0 0 0;
+    background: url("../../img/back-desktop.jpg") no-repeat 50% 50%;
   }
 }
 
-.application__header {
+.application__container {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  //width: 100%;
   height: 733px;
-  margin: 0 auto;
-  padding: 0;
-  background: url("../../img/back-mobile.jpg") no-repeat 50% 0;
-  z-index: 5;
-  .outline();
+  //margin: 0 auto;
+  //padding: 0 20px;
+  text-align: center;
+  background: url("../../img/screen.png") no-repeat 50% 40%, url("../../img/phone.png") no-repeat 0 40%;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
-    height: 729px;
-    background-size: cover;
+    //position: relative;
+    //width: 620px;
+    height: 731px;
+    //margin: 0 auto;
+    //padding: 0 20px;
+    //outline-offset: -5px;
+    //outline: 5px solid black;
+    background: url("../../img/screen-tablet.png") no-repeat 74% 62%, url("../../img/phone-tablet.png") no-repeat 0% 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+    justify-content: flex-start;
+    height: 852px;
+    background: url("../../img/phone-desctop.png") no-repeat 25px 100%;
+  }
+}
+
+.application__slogan {
+  margin: 0 auto;
+  padding: 90px 20px 34px 20px;
+  width: auto;
+  min-height: 47px;
+  font-weight: @fw-small;
+  font-size: @fs-large;
+  line-height: 29px;
+  //z-index: 10;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 204px 0 0 0;
+    padding: 0;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    //outline-offset: -2px;
+    //outline: 2px solid orangered;
+    background-color: plum;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+    margin: 210px 0 37px 0;
+    padding: 0;
+  }
+}
+
+.application__slogan br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }
 
 .application__features {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 271px;
-  .wrapper();
+  //width: 100%;
+  min-height: 270px;
   background-color: @basic-navy-blue;
-  order: 2;
 
   @media (min-width: @tablet-width) {
+    justify-content: space-between;
     width: 300px;
+    min-height: 237px;
+    margin: 0 0 115px 0;
+    padding: 0;
     background-color: transparent;
+    //order: 1;
+    outline-offset: -2px;
+    outline: 2px solid blueviolet;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.application__wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -51,44 +133,71 @@
   .reset-list();
   justify-content: space-evenly;
   align-items: center;
-}
-
-.application__image {
-  order: 1;
-  background: url("../../img/screen.png") no-repeat 50% 36%;
-}
-
-.application__slogan {
-  margin: 84px auto 34px auto;
-  padding: 0 20px;
-  font-weight: @fw-small;
-  font-size: @fs-large;
-  line-height: 29px;
-  z-index: 10;
-  outline-offset: -2px;
-  outline: 2px solid orangered;
+  margin: 32px 0 15px 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
-    width: 300px;
-    height: 127px;
     margin: 0;
-    padding: 0 20px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 45px 0;
   }
 }
 
 .application__button {
   display: block;
   width: 100%;
-  padding: 21px 0;
+  margin: 29px 0 0 0;
+  padding: 14px 0 17px 0;
   box-sizing: border-box;
+  border: 3px solid @basic-white;
+  border-radius: 29px;
+
+  &:hover,
+  &:active {
+    border: 3px solid @basic-white;
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    margin: 0 0 25px 0;
+    padding: 14px 0 17px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 68px 0;
+    padding: 16px 0 17px 0;
+  }
+}
+
+.application__features a {
   font-weight: @fw-large;
   font-size: @fs-medium;
   line-height: @lh-small;
-  border: 3px solid @basic-white;
-  border-radius: 29px;
+
+  &:hover {
+    color: @basic-purplish-red;
+  }
+
+  &:active {
+    color: fade(@basic-purplish-red, 30%);
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+  }
 }
 
 .application__text {
   margin: 0;
+  padding: 0;
   font-weight: @fw-small;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    font-size: @fs-medium;
+  }
 }
