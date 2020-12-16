@@ -4,10 +4,6 @@
   margin: 0;
   padding: 0;
   text-align: center;
-
-  @media (min-width: @desktop-width) {
-    /*.wrapper-desktop();*/
-  }
 }
 
 .advantages__header {
@@ -62,12 +58,15 @@
 .advantages__wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  padding: 84px 20px 0 20px;
+  //margin: 0 auto;
+  //padding: 84px 20px 0 20px;
+  margin: 0;
+  padding: 0;
+
   height: 705px;
   //clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
   //.bg-grey();
-  //background: url("../../img/grey-background-mobile.png");
+  background: url("../../img/grey-background-mobile.png");
   background-repeat: no-repeat;
   background-position: 0 -40px;
   background-size: cover;
@@ -79,8 +78,8 @@
     position: relative;
     justify-content: flex-end;
     height: 487px;
-    margin: 0 auto;
-    padding: 28px 20px 0 20px;
+    //margin: 0 auto;
+    padding: 28px 0 0 0;
     z-index: 1;
     outline: 2px solid green;
     outline-offset: -2px;
@@ -93,27 +92,29 @@
   @media (min-width: @desktop-width) {
     height: 715px;
     justify-content: flex-start;
+    //width: 940px;
+    margin: 0;
+    padding: 0;
     background: url("../../img/grey-background-desctop.png");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
-    //.wrapper-desktop();
-    margin: 0 auto;
-    padding: 0 10px;
-    //width: 940px;
   }
 }
 
 .advantages__list {
   //.wrapper();
+  //margin: 0;
+  //padding: 0;
+
   margin: 0;
-  padding: 0;
+  padding: 84px 20px 0 20px;
+
   list-style: none;
 
   @media (min-width: @tablet-width) {
-
     margin: 0;
-    padding: 76px 0 0 0;
+    padding: 76px 20px 0 20px;
     text-align: left;
     //min-height: 390px;
   }
@@ -122,11 +123,7 @@
     display: flex;
     //align-items: flex-end;
     flex-direction: row;
-    //.wrapper-desktop();
-    margin: 0;
-    padding: 0;
-
-    background-color: yellow;
+    .wrapper-desktop();
   }
 }
 
@@ -151,11 +148,6 @@
     margin: 0 20px 0 0;
     padding: 0;
     text-align: center;
-    //overflow-x: hidden;
-    background-color: aquamarine;
-    outline: 2px solid blue;
-    outline-offset: -2px;
-    //background-color: yellow;
   }
 }
 
