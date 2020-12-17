@@ -9,6 +9,11 @@
 .advantages__header {
   margin: 0;
   padding: 42px 0 0 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    padding: 63px 0 57px 0;
+  }
 }
 
 .advantages__text {
@@ -27,6 +32,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    padding: 0;
     font-size: 50px;
     line-height: 68px;
   }
@@ -62,8 +69,7 @@
   //padding: 84px 20px 0 20px;
   margin: 0;
   padding: 0;
-
-  height: 705px;
+  height: 790px;
   //clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
   //.bg-grey();
   background: url("../img/grey-background-mobile.png");
@@ -90,7 +96,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    height: 715px;
+    height: 590px;
     justify-content: flex-start;
     //width: 940px;
     margin: 0;
@@ -106,21 +112,23 @@
   //.wrapper();
   //margin: 0;
   //padding: 0;
-
+  //height: 755px;
   margin: 0;
   padding: 84px 20px 0 20px;
-
   list-style: none;
+
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 76px 20px 0 20px;
+    padding: 75px 20px 0 20px;
+    height: 410px;
     text-align: left;
     //min-height: 390px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
+    height: 616px;
     //align-items: flex-end;
     flex-direction: row;
     .wrapper-desktop();
@@ -141,14 +149,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 300px;
-    min-height: 715px;
+    min-height: 205px;
     margin: 0 20px 0 0;
     padding: 0;
     text-align: center;
-    background: url("../img/iphone 3.png") no-repeat 50% 0;
+    //background: url("../img/iphone 3.png") no-repeat 50% 0;
   }
 }
 
@@ -166,14 +174,22 @@
   font-size: @fs-medium;
   color: @basic-black;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: 30px;
     line-height: @lh-large;
     order: 1;
     background-color: @basic-smoky-white;
-    padding: 160px 0 20px 0;
+    padding: 60px 0 2px 0;
     z-index: 3;
     position: relative;
+
+    br {
+      display: block;
+    }
   }
 }
 
@@ -182,9 +198,74 @@
     font-size: @fs-medium;
     line-height: @lh-large;
     order: 1;
+    padding-bottom: 40px;
   }
 }
 
+
+.advantages__item--makes .advantages__description {
+  //height: 340px;
+  padding: 0 0 24px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 40px;
+  }
+}
+
+.advantages__item--makes {
+  //background: url("../img/iphone-small.png") no-repeat 50% 149px;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.advantages__item img {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 186px;
+    height: 382px;
+  }
+}
+
+.advantages__item--makes img {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 20px;
+    top: 29px;
+    //z-index: 3;
+    width: 268px;
+    height: 547px;
+  }
+
+  @media (min-width: @desktop-width) {
+    //position: static;
+    width: 186px;
+    height: 382px;
+    //margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    z-index: 1;
+  }
+}
 
 .br-mobile {
   @media (min-width: @tablet-width) {
@@ -214,52 +295,5 @@
   @media (min-width: @desktop-width) {
 
     display: block;
-  }
-}
-
-//.remove-over {
-//  @media (min-width: @tablet-width) {
-//    display: block;
-//  }
-//
-//  @media (min-width: @desktop-width) {
-//    display: none;
-//  }
-//}
-
-.advantages__item--makes .advantages__description {
-  padding: 0 0 24px 0;
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
-  }
-}
-
-.advantages__item--makes {
-  @media (min-width: @desktop-width) {
-    position: relative;
-    //background: url("../../img/iphone 3.png") no-repeat 50% 0;
-  }
-}
-
-.advantages__item--makes img {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    left: 20px;
-    top: 29px;
-    //z-index: 3;
-    width: 268px;
-    height: 547px;
-  }
-
-  @media (min-width: @desktop-width) {
-    //position: static;
-    width: 186px;
-    height: 382px;
-    left: 20px;
-    top: 0;
-    outline: 5px solid blue;
-    outline-offset: -5px;
-    z-index: 1;
   }
 }
