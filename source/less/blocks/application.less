@@ -21,6 +21,7 @@
     margin: -110px 0 0 0;
     background: url("../img/back-desktop.jpg") no-repeat 50% 0;
     background-color: @basic-navy-blue;
+    background-size: cover;
   }
 }
 
@@ -34,7 +35,6 @@
   //margin: 0 auto;
   //padding: 0 20px;
   text-align: center;
-  background: url("../img/screen.png") no-repeat 50% 40%, url("../img/phone-mobile.png") no-repeat 0 40%;
   z-index: 2;
 
   @media (min-width: @tablet-width) {
@@ -43,16 +43,12 @@
     height: 731px;
     //margin: 0 auto;
     //padding: 0 20px;
-    //outline-offset: -5px;
-    //outline: 5px solid black;
-    background: url("../img/screen-tablet.png") no-repeat 80% 62%, url("../img/phone-tablet.png") no-repeat 0% 100%;
   }
 
   @media (min-width: @desktop-width) {
     .wrapper-desktop();
     justify-content: flex-start;
     height: 855px;
-    background: url("../img/screen-desktop.jpg") no-repeat 82% 61%, url("../img/phone-desctop.png") no-repeat 25px 100%;
   }
 }
 

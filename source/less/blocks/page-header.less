@@ -3,12 +3,9 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  //background-color: lighten(@basic-navy-blue, 5%);
-  background: fade(@basic-black, 15%);
-
-  @media (min-width: @desktop-width) {
-    z-index: 3;
-  }
+  position: relative;
+  background-color: fade(@basic-black, 15%);
+  z-index: 11;
 }
 
 .page-header__wrapper {
@@ -31,13 +28,15 @@
 }
 
 .page-header__logo {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
   padding: 0 20px;
   height: 69px;
-  background: fade(@basic-black, 15%);
+  background-color: @basic-navy-blue;
+
   fill: @basic-white;
   z-index: 10;
 

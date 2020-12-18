@@ -131,7 +131,7 @@
             победить<br class="br-mobile"> осеннюю хандру<br class="br-desktop"> и депрессию<br class="br-mobile">
             буквально в<br class="br-tablet">
             несколько кликов!</p>
-          <img src="img/iphone-small.png" width="157" height="320" alt="iphone">
+          <img src="img/iphone-one.png" width="186" height="382" alt="Айфон с серым экраном">
         </li>
         <li class="advantages__item advantages__item--changes">
           <h3 class="advantages__title">Меняет мир вокруг</h3>
@@ -140,7 +140,7 @@
             или текстовой подписью,<br class="br-desktop">
             чтобы<br class="br-tablet">
             усилить эффект</p>
-          <img src="img/iphone-small.png" width="157" height="320" alt="iphone">
+          <img src="img/iphone-two.png" width="186" height="382" alt="Айфон с красным экраном">
 
         </li>
         <li class="advantages__item advantages__item--makes">
@@ -150,7 +150,7 @@
             фотографиями с друзьями<br class="br-desktop">
             и заводите
             новых</p>
-          <img src="img/iphone-small.png" width="157" height="320" alt="iphone">
+          <img src="img/iphone-three.png" width="157" height="320" alt="Айфон со смайликом">
         </li>
       </ul>
     </div>
@@ -171,10 +171,10 @@
     </section>
 
   <section class="reviews">
-    <div class="reviews__wrapper slider">
+    <div class="reviews__wrapper">
       <h2 class="visually-hidden">Отзывы о нас</h2>
-      <div class="reviews__list slider__list">
-        <blockquote class="reviews__item slider__item">
+      <div class="reviews__list slider-reviews">
+        <blockquote class="reviews__item">
           <div class="reviews__author-info">
             <cite class="reviews__author-name">Николай Петров</cite>
             <p class="reviews__author-details">25 лет, водитель трамвая</p>
@@ -183,22 +183,24 @@
           </div>
         </blockquote>
       </div>
-      <p class="reviews__toggles slider__toggles">
-        <button class="slider__toggle slider__toggle--current" type="button">1</button>
-        <button class="slider__toggle" type="button">2</button>
-        <button class="slider__toggle" type="button">3</button>
-      </p>
+      <div class="reviews__toggle slider-buttons">
+        <button class="slider-button slider-button--current" type="button"></button>
+        <button class="slider-button" type="button"></button>
+        <button class="slider-button" type="button"></button>
+      </div>
+      <div class="reviews__arrows">
+        <button class="reviews__arrow reviews__arrow--left" aria-label="Назад"></button>
+        <button class="reviews__arrow reviews__arrow--right" aria-label="Вперед"></button>
+      </div>
     </div>
   </section>
 
   <section class="tariffs">
-    <div class="tariffs__wrapper slider">
+    <div class="tariffs__wrapper slider-tariffs">
       <h2 class="visually-hidden">Комплектации и стоимость</h2>
       <table class="tariffs__list">
         <tr class="tariffs__item">
-          <th class="tariffs__tuning">Название
-            <!-- <p class="tariffs__price">1,99 Usd</p>-->
-          </th>
+          <th class="tariffs__tuning"></th>
           <th class="tariffs__name">База
             <p class="tariffs__price">1,99 Usd</p>
           </th>
@@ -228,12 +230,13 @@
           <td class="available">Комментарии</td>
         </tr>
       </table>
-      <p class="tariffs__toggles slider-tariffs">
-        <button class="slider-tariffs__button" type="button">1</button>
-        <button class="slider-tariffs__button slider-tariffs__button--current" type="button">2</button>
-        <button class="slider-tariffs__button" type="button">3</button>
+      <p class="tariffs__toggles slider-buttons">
+        <button class="slider-button tariffs__slider-button" type="button"></button>
+        <button class="slider-button tariffs__slider-button tariffs__slider-button--current" type="button"></button>
+        <button class="slider-button tariffs__slider-button" type="button"></button>
       </p>
     </div>
+
   </section>
 
   <section class="contacts">
@@ -250,13 +253,13 @@
         <li class="contacts__item contacts__item--email">
           <h3 class="contacts__title">Пишите:</h3>
           <p>
-            <a class="contacts__text">mail@htmlacademy.ru</a>
+            <a class="contacts__text" href="#">mail@htmlacademy.ru</a>
           </p>
         </li>
         <li class="contacts__item">
           <h3 class="contacts__title">Приезжайте в гости:</h3>
           <p>
-            <a class="contacts__text">ул. Большая<br>Конюшенная, 19/8</a>
+            <a class="contacts__text" href="#">ул. Большая<br>Конюшенная, 19/8</a>
           </p>
         </li>
       </ul>
