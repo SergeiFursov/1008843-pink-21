@@ -4,8 +4,17 @@
   margin: 0;
   overflow: hidden;
   position: relative;
-  height: 500px;
+  height: 213px;
   background-color: @basic-smoky-white;
+  clip-path: polygon(50% 22%, 100% 6%, 100% 100%, 0 100%, 0 6%);
+
+  @media (min-width: @tablet-width) {
+    height: 380px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+  }
 }
 
 .map iframe {

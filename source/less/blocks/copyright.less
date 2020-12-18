@@ -1,5 +1,31 @@
 // Copyright
 
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+}
+
 .copyright__text {
+  margin-right: 10px;
   line-height: @lh-small;
+
+  @media (min-width: @desktop-width) {
+    font-size: @fs-medium;
+  }
+}
+
+.copyright__icon {
+  fill: @basic-purplish-red;
+
+  &:hover {
+    fill: @basic-navy-blue;
+  }
+
+  &:active {
+    fill: fade(@basic-navy-blue, 30%);
+  }
 }

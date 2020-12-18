@@ -3,109 +3,275 @@
 .advantages {
   margin: 0;
   padding: 0;
-  padding-top: 46px;
   text-align: center;
+}
+
+.advantages__header {
+  margin: 0;
+  padding: 42px 0 0 0;
 
   @media (min-width: @desktop-width) {
-    /*.wrapper-desktop();*/
+    margin: 0 auto;
+    padding: 63px 0 57px 0;
   }
 }
 
-.advantages__container {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  .bg-grey();
-  outline: 2px solid blue;
-  outline-offset: -2px;
-
+.advantages__text {
+  margin: 0 auto;
+  padding: 0 0 29px 0;
+  font-weight: @fw-small;
+  font-size: @fs-large;
+  line-height: 29px;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
-    /*display: flex;
-    flex-direction: row;
-    justify-content: flex-end;*/
+    margin: 0 auto;
+    padding: 2px 0 0 0;
+    font-size: 40px;
+    line-height: 54px;
   }
 
   @media (min-width: @desktop-width) {
-    outline: 2px solid darkseagreen;
-    outline-offset: -2px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 50px;
+    line-height: 68px;
   }
 }
 
 .advantages__wrapper {
-  .wrapper();
-  outline: 2px solid red;
-  outline-offset: -2px;
+  display: flex;
+  flex-direction: column;
+  //margin: 0 auto;
+  //padding: 84px 20px 0 20px;
+  margin: 0;
+  padding: 0;
+  height: 790px;
+  //clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
+  //.bg-grey();
+  background-image: url("../img/adv-mobile.png");
+  background-position: 0 -40px;
+  background-size: cover;
+  overflow: hidden; // Скрывает телефон снизу
+  //background-color: greenyellow;
 
   @media (min-width: @tablet-width) {
-    .wrapper-tablet();
-    display: flex;
     flex-direction: row;
+    position: relative;
     justify-content: flex-end;
-    outline: 2px solid yellow;
-    outline-offset: -2px;
+    height: 487px;
+    //margin: 0 auto;
+    padding: 28px 0 0 0;
+    z-index: 1;
+    background: url("../img/adv-tablet.png");
+    //background-repeat: no-repeat;
+    background-position: 0 6px;
+    background-size: cover;
   }
 
   @media (min-width: @desktop-width) {
-    .wrapper-desktop();
+    height: 590px;
+    justify-content: flex-start;
+    //width: 940px;
+    margin: 0;
+    padding: 0;
+    background: url("../img/adv-desktop.png");
+    //background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
   }
 }
 
 .advantages__list {
   margin: 0;
-  padding: 0;
+  padding: 84px 20px 0 20px;
   list-style: none;
-  outline: 2px solid greenyellow;
-  outline-offset: -2px;
+
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    margin: 0;
+    padding: 75px 20px 0 20px;
+    height: 410px;
     text-align: left;
-    height: 390px;
+    //min-height: 390px;
   }
 
   @media (min-width: @desktop-width) {
-    outline: 2px solid blue;
-    outline-offset: -2px;
     display: flex;
+    height: 616px;
+    //align-items: flex-end;
     flex-direction: row;
-    /*.wrapper-desktop();*/
+    .wrapper-desktop();
   }
 }
 
 .advantages__item {
+  margin: 0;
+  padding: 0 0 14px 0;
+
   @media (min-width: @tablet-width) {
-    width: 320px;
-    outline: 2px solid red;
-    outline-offset: -2px;
+    width: 310px;
+    margin: 0;
+    padding: 0 0 19px 0;
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     width: 300px;
-    margin-right: 20px;
+    min-height: 205px;
+    margin: 0 20px 0 0;
+    padding: 0;
+    text-align: center;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 300px;
+      height: 17px;
+      top: 281px;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background: url("../img/shadow.png") no-repeat;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .advantages__item:nth-child(3n) {
     margin-right: 0;
+    padding: 0;
   }
 }
 
 .advantages__title {
   margin: 0;
+  padding: 0;
   font-weight: @fw-large;
   font-size: @fs-medium;
   color: @basic-black;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 30px;
+    line-height: @lh-large;
+    order: 1;
+    background-color: @basic-smoky-white;
+    padding: 60px 0 2px 0;
+    z-index: 3;
+    position: relative;
+
+    br {
+      display: block;
+    }
+  }
 }
 
-.advantages__text {
-  margin: 0;
-  font-weight: @fw-small;
-  font-size: @fs-large;
-  line-height: 29px;
+.advantages__description {
+  @media (min-width: @desktop-width) {
+    font-size: @fs-medium;
+    line-height: @lh-large;
+    order: 1;
+    padding-bottom: 40px;
+  }
+}
+
+.advantages__item--makes .advantages__description {
+  //height: 340px;
+  padding: 0 0 24px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 40px;
+  }
+}
+
+.advantages__item--makes {
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.advantages__item img {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 186px;
+    height: 382px;
+    z-index: 2;
+  }
+}
+
+.advantages__item--makes img {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 20px;
+    top: 29px;
+    //z-index: 3;
+    width: 268px;
+    height: 547px;
+  }
+
+  @media (min-width: @desktop-width) {
+    //position: static;
+    width: 186px;
+    height: 382px;
+    //margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    z-index: 1;
+  }
+}
+
+.br-mobile {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.br-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.br-desktop {
+  display: none;
+
+  //@media (min-width: @tablet-width) {
+  //  display: none;
+  //}
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }

@@ -2,11 +2,11 @@
 
 .diagram {
   display: none;
-  .bg-grey();
 
   @media (min-width: @tablet-width) {
     display: block;
-    background-color: @basic-white;
+    min-height: 330px;
+    .wrapper-tablet();
   }
 
   @media (min-width: @desktop-width) {
@@ -19,36 +19,83 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    min-height: 330px;
-    .wrapper-tablet();
-    outline: 2px solid red;
-    outline-offset: -2px;
+    //min-height: 330px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 430px;
-    .wrapper-desktop();
+    //min-height: 430px;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
   }
 }
 
 .diagram__container {
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-    width: 320px;
-    outline: 2px solid blue;
-    outline-offset: -2px;
+    width: 310px;
+    //min-height: 330px;
+    //.wrapper-tablet();
+    //display: flex;
+    //flex-direction: column;
   }
 
   @media (min-width: @desktop-width) {
-    width: 620px;
-    outline: 2px solid red;
-    outline-offset: -2px;
+    width: 570px;
+    min-height: 447px;
+  }
+}
+
+.diagram__title {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 96px 0 10px 0;
+    font-weight: @fw-large;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 129px 0 25px 0;
+  }
+
+  br {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.diagram__description {
+  margin: 0;
+  padding: 0 0 10px 0;
+
+  @media (min-width: @tablet-width) {
+    .br-diagram-desk {
+      display: none;
+    }
+    padding: 0 0 9px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .br-diagram-tablet {
+      display: none;
+    }
+
+    .br-diagram-desk {
+      display: block;
+    }
+    font-size: @fs-medium;
+    line-height: @lh-large;
   }
 }
 
 .diagram__container a {
   @media (min-width: @tablet-width) {
     color: @basic-purplish-red;
+    text-decoration-line: underline;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: @fs-medium;
   }
 }
