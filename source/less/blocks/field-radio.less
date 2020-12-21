@@ -1,37 +1,82 @@
-.field-radio {
+.form__container-radio {
+  margin: 0;
+  padding: 0;
   .bg-grey();
 
   @media (min-width: @tablet-width) {
     background-color: @basic-white;
     order: 1;
   }
+}
+
+.field-radio {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 59px 0;
+  }
 
   @media (min-width: @desktop-width) {
-    width: 435px;
-    background-color: yellow;
+    width: 431px;
   }
 }
 
 .field-radio__title {
   .title-legend();
-  .bg-grey();
+  padding: 39px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 25px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .field-radio__list {
-  .wrapper();
-
+  margin: 0 auto;
+  padding: 39px 20px 0 20px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    padding: 0 62px;
+    padding: 48px 58px 57px 58px;
+    //.outline();
+  }
+
+  @media (min-width: @desktop-width) {
+    //margin: 0 0 46px 0;
+    padding: 48px 74px 57px 74px;
   }
 }
 
 .field-radio__item {
-  margin-bottom: 40px;
+  margin: 0 0 45px 0;
+  padding: 0 0 0 70px;
+  //.outline();
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 45px 0;
+    padding: 0 0 0 60px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 46px 0;
+    padding: 0 0 0 59px;
+  }
 }
 
 .field-radio__label {
-  padding-left: 59px;
+  margin: 0;
+
   .label-dark();
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    //.outline();
+  }
 }
