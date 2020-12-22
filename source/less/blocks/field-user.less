@@ -1,12 +1,24 @@
 .field-user {
+  margin: 0 0 25px 0;
+  //outline: 1px solid blue;
+  //outline-offset: -1px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 59px 0;
+    border: none;
+  }
+
   @media (min-width: @desktop-width) {
     width: 435px;
+    margin-top: 14px;
   }
 }
 
 .field-user__list {
   list-style: none;
-  .wrapper();
+  margin: 0 auto;
+  padding: 35px 20px 0 20px;
+
 
   @media (min-width: @tablet-width) {
     .indents-zero();
@@ -16,11 +28,16 @@
 .field-user__item {
   @media (min-width: @tablet-width) {
     display: flex;
+    margin: 0 0 53px 0;
+  }
+
+  &:last-child {
+    margin: 0;
   }
 }
 
 .field-user__label {
-  margin: 0 0 17px 20px;
+  margin: 0 0 5px 23px;
   .label-red();
 
   @media (min-width: @tablet-width) {
@@ -31,10 +48,16 @@
 
 .field-user__text {
   width: 100%;
-  margin: 0;
-  padding: 22px 0 22px 20px;
+  margin: 0 0 16px 0;
+  padding: 15px 10px 15px 20px;
   box-sizing: border-box;
   /* width: 280px;*/
   /*  box-sizing: border-box;*/
   .input-text();
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    align-self: center;
+    padding: 15px 10px 14px 17px;
+  }
 }

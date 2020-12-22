@@ -1,11 +1,17 @@
 .field-message {
-
+  margin: 37px 0 0 0;
+  padding: 0 0 25px 0;
   width: 100%;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
+    margin: 0 0 59px 0;
+    padding: 0 58px 45px 58px;
     order: 4;
-    padding: 47px 62px 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 58px 36px 58px;
   }
 }
 
@@ -19,21 +25,35 @@
 }
 
 .field-message__title {
-  /*padding: 42px 0 22px 0;*/
+  margin: 0 0 17px 0;
   .title-legend();
-  margin: 0 auto;
-  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 37px 0;
+    padding: 0 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 33px 0;
+  }
 }
 
 .field-message__text {
   width: 100%;
   margin: 0 auto;
-  padding: 22px 25px 0 20px;
+  padding: 13px 20px 0 20px;
   box-sizing: border-box;
-  min-height: 197px;
+  min-height: 200px;
+  border: 2px solid @basic-gray;
+  border-radius: 1px;
+  resize: none;
   .input-text();
 
+  @media (min-width: @tablet-width) {
+    min-height: 192px;
+  }
+
   @media (min-width: @desktop-width) {
-    min-height: 124px;
+    min-height: 127px;
   }
 }

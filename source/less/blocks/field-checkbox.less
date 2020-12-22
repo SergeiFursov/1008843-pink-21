@@ -1,11 +1,28 @@
-.field-checkbox {
+.form__container-checkbox {
+  margin: 0;
+  padding: 39px 0 0 0;
   .bg-grey();
-  outline: 2px solid red;
-  outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
-    background-color: @basic-white;
     order: 3;
+    background-color: @basic-white;
+    margin: 19px 0 59px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.field-checkbox {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    //margin: 19px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
@@ -15,50 +32,69 @@
 
   @media (min-width: @tablet-width) {
     background-color: @basic-white;
+    padding: 0 30px;
+
+    br {
+      display: none;
+    }
   }
 }
 
 .field-checkbox__list {
-  .wrapper();
+  margin: 0 auto;
+  padding: 42px 20px 0 20px;
   list-style: none;
-  outline: 2px solid red;
-  outline-offset: -2px;
-  background-color: yellow;
+  //background-color: yellow;
+  //outline: 2px solid red;
+  //outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 55px 62px;
+    padding: 48px 58px 0 58px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    /*padding: 60px;*/
+    padding: 42px 58px 37px 58px;
     /*min-height: 230px;*/
     display: grid;
     grid-template-rows: 60px 60px;
-    grid-template-columns: repeat(2, 270px) 220px;
+    grid-template-columns: 1fr, 240px, 210px;
     grid-auto-flow: column;
     /* justify-content: center;
      align-content: center;
      align-items: flex-start;*/
-    /*column-gap: 55px;*/
+    column-gap: 50px;
+    row-gap: 20px;
   }
 }
 
 .field-checkbox__item {
-  margin-bottom: 45px;
-  padding-left: 57px;
-  background-color: pink;
+  margin: 0 0 52px 0;
+  padding-left: 59px;
+  //outline: 2px solid red;
+  //outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
-    /*text-align: center;*/
+    //padding-left: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    height: 42px;
+    align-items: center;
+    //margin: 0;
+    //padding-left: 59px;
   }
 }
 
-.field-checkbox__item:last-child {
-  margin-bottom: 0;
-}
-
 .field-checkbox__label {
+  //padding-left: 59px;
   .label-dark();
+
+  @media (min-width: @desktop-width) {
+    //width: auto;
+    margin: 0;
+    //padding: 0 0 0 59px;
+  }
 }

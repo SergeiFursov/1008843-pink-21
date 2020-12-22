@@ -1,22 +1,159 @@
 //Modal
 
 .modal {
-  display: none;
-  outline: 5px solid rgba(105, 250, 255, 0.9);
-  outline-offset: 5px;
+  position: absolute;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 38px 0 0 0;
+  text-align: center;
+  background: @basic-white;
+  box-shadow: 0 7px 15px @special-black-light;
+  border-radius: 5px;
+  //outline: 1px solid rgba(105, 250, 255, 0.9);
+  //outline-offset: -1px;
+  z-index: 15;
+
+  @media (min-width: @tablet-width) {
+    max-width: 460px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 780px;
+  }
+}
+
+.modal__wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px 45px 20px;
+  }
+}
+
+.modal__wrapper--error {
+  padding: 0 0 52px 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 52px 0 52px 0;
+    .bg-grey();
+  }
+}
+
+.modal__wrapper--submit {
+  padding: 45px 0 45px 0;
+  .bg-grey();
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 52px 0 52px 0;
+  }
+}
+
+.modal__error {
+  top: 1167px;
+
+  @media (min-width: @tablet-width) {
+    top: 1167px;
+    left: 0;
+    right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    //min-height: 377px;
+    top: 824px;
+    left: 0;
+    right: 0;
+  }
+}
+
+.modal__submit {
+  top: 1628px;
+
+  @media (min-width: @tablet-width) {
+    top: 1641px;
+    left: 0;
+    right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 1284px;
+    left: 0;
+    right: 0;
+  }
 }
 
 .modal__title {
+  margin: 0 auto;
+  padding: 0 0 25px 0;
   font-weight: @fw-large;
-  font-size: 30px;
-  line-height: 40px;
+  font-size: @fs-medium;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 23px 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .modal__text {
-  font-size: 18px;
+  margin: 0 auto;
+  padding: 0 0 40px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 33px 0;
+    font-size: @fs-medium;
+  }
+}
+
+.modal__error .modal__text {
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0 0 61px 0;
+  }
 }
 
 .modal__button {
-  .btn-green();
+  //width: auto;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+}
+
+.modal__button--wide {
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    max-width: 456px;
+  }
+}
+
+.modal-mobile-br {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.modal-tablet-br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.modal-desktop-br {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }

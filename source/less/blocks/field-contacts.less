@@ -1,6 +1,15 @@
 .field-contacts {
+  margin: 0;
+  padding: 28px 0 25px 0;
+  //background-color: aquamarine;
+
   @media (min-width: @tablet-width) {
+    padding: 35px 58px 0 58px;
     order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 31px 58px 15px 58px;
   }
 }
 
@@ -9,6 +18,7 @@
 
   @media (min-width: @tablet-width) {
     display: inline;
+    padding: 0 30px;
     .title-legend();
   }
 }
@@ -16,16 +26,17 @@
 .field-contacts__list {
   .wrapper();
   list-style: none;
-  background-color: greenyellow;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 0 62px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -34,17 +45,19 @@
 }
 
 .field-contacts__item {
-  background-color: yellow;
-
+  //background-color: yellow;
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column-reverse;
+    margin: 0;
+    //padding: 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 371px;
+    width: 374px;
     margin: 0;
-    padding: 0;
+    //padding: 0;
+    //.outline();
   }
 }
 
@@ -54,24 +67,37 @@
   }
 }
 
+
 .field-contacts__label {
   display: block;
-  margin: 42px 0 17px 24px;
+  margin: 0;
+  padding: 0 0 5px 24px;
   .label-red();
 
   @media (min-width: @tablet-width) {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin: 0;
+    padding: 10px 10px 28px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 7px 10px 0 19px;
   }
 }
 
 .field-contacts__text {
   width: 100%;
   box-sizing: border-box;
-  padding: 23px 0 23px 20px;
+  margin: 0 0 16px 0;
+  padding: 14px 0 16px 20px;
   .input-text();
 
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    //padding: 0;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 371px;
+    //width: 371px;
   }
 }
