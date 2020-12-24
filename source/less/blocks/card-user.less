@@ -1,109 +1,171 @@
-/*
-.card-user {
-  margin: 0 0 20px 0;
-  padding: 0;
-  min-height: 301px;
-  .bg-grey();
-  outline: 2px solid green;
-  outline-offset: 2px;
-  display: grid;
-  grid-template-rows: 180px 1fr;
+.card-user__link {
+  min-height: 180px;
+  //display: block;
+  //margin: 0;
+  //padding: 0 0 0 48px;
+  //font-size: 12px;
+  //text-transform: uppercase;
+  //
+  //@media (min-width: @tablet-width) {
+  //  padding: 0;
+  //}
+  @media (min-width: @tablet-width) {
+    min-height: 300px;
+  }
 
   @media (min-width: @desktop-width) {
-    grid-row: 2 / 3;
+    min-height: 400px;
+  }
+}
+
+.card-user {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 51px 0;
+  }
+}
+
+.card-user--hit {
+  margin: 0 0 20px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 51px 0;
   }
 }
 
 .card-user__wrapper {
-  min-height: auto;
-  margin: 0;
-  padding: 25px 17px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: pink;
-  outline: 2px blue solid;
-  outline-offset: -2px;
-
+  margin: 0;
+  padding: 18px 10px 18px 17px;
+  text-align: left;
+  .bg-grey();
+  //  display: flex;
+  //  flex-direction: column;
+  //  justify-content: space-between;
+  //  background-color: pink;
+  //  outline: 2px blue solid;
+  //  outline-offset: -2px;
+  //
   @media (min-width: @tablet-width) {
-    min-height: 155px;
-    padding: 30px;
-    outline: 2px red solid;
-    outline-offset: -2px;
+    height: 109px;
+    //justify-content: space-between;
+    padding: 23px 30px 23px 30px;
+    //outline: 2px red solid;
+    //outline-offset: -2px;
   }
 }
 
-.card-user__inner {
-  margin: 0 0 26px 0;
-  padding: 0;
-  !* font-weight: @fw-large;*!
-  outline: 2px brown solid;
-  outline-offset: -2px;
+.card-user__wrapper--hit {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: flex;
+    height: 87px;
+    padding: 23px 30px 10px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 62px;
+  }
 }
 
-.card-user__link {
-  width: 100%;
-  height: 100%;
+.card-user__name {
+  margin: 0;
+  padding: 0;
+  font-size: @fs-small;
+  line-height: @lh-medium;
+}
+
+.card-user__name--hit {
+  margin: 0;
+  //background-color: greenyellow;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto 0 0;
+    padding: 0;
+    height: 25px;
+  }
 }
 
 .time-counter {
   margin: 0;
+  padding: 0 0 0 4px;
   font-weight: @fw-small;
   font-size: 12px;
+  line-height: @lh-medium;
   text-transform: uppercase;
 }
 
 .card-user__description {
   margin: 0;
-}
-
-.card-user__like {
-  display: block;
-  margin: 0;
-  padding: 0 0 0 48px;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: @basic-purplish-red;
-  background-color: #2aab6d;
+  padding: 0 0 11px 0;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     padding: 0;
   }
 }
-*/
-.card-user {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  background-color: greenyellow;
 
-  @media (min-width: @tablet-width) {
-    padding: 30px;
-  }
-}
-
-.card-user:first-child {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  background-color: navajowhite;
-}
-
-.card-user__name {
-  background-color: pink;
-}
-
-.time-counter {
-  margin: 0;
-  padding: 0;
-}
 
 .card-user__description--bottom {
   @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
     order: 1;
+
+    br {
+      display: none;
+    }
   }
+}
+
+.card-user__inner {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row-reverse;
+    margin-top: auto;
+    padding: 0;
+  }
+}
+
+.card-user__inner--hit {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    height: 28px;
+    position: absolute;
+    right: 30px;
+  }
+}
+
+.card-user__button-like {
+  margin: 0 20px 0 0;
+  //padding-bottom: 0;
+  border: none;
+  outline: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 0 auto;
+  }
+}
+
+.card-user__button-like--hit {
+  @media (min-width: @tablet-width) {
+    margin: 0 0 0 16px;
+    //padding: 0;
+  }
+}
+
+.card-user__like {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  text-transform: uppercase;
 }
