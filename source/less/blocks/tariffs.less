@@ -19,9 +19,9 @@
   @media (min-width: @tablet-width) {
     width: auto;
     //max-width: 940px;
-    height: 305px;
+    height: 289px;
     margin: 0;
-    padding: 110px 0 0 0;
+    padding: 112px 0 0 0;
     background: url("../img/tariffs-tablet.png");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -35,7 +35,7 @@
     //padding: 0 10px;
     background: url("../img/tariffs-desktop.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 0 -5px;
     background-size: cover;
   }
 }
@@ -61,7 +61,7 @@
     max-width: 1200px;
     //width: 940px;
     margin: 0 auto;
-    padding: 49px 0 0 0;
+    padding: 40px 0 0 0;
   }
 }
 
@@ -143,14 +143,14 @@ td {
   content: " ";
   width: 31px;
   height: 21px;
-  background: url("../img/yes.png");
+  background: url("../img/yes.svg");
 }
 
 .not-available::after {
   content: " ";
   width: 27px;
   height: 27px;
-  background: url("../img/no.png");
+  background: url("../img/no.svg");
 }
 
 
@@ -175,7 +175,7 @@ td {
   }
 
   @media (min-width: @desktop-width) {
-    padding: 13px 10px 25px 10px;
+    padding: 13px 10px 22px 10px;
     font-size: @fs-medium;
   }
 }
@@ -213,7 +213,7 @@ td {
   }
 
   @media (min-width: @desktop-width) {
-    padding: 10px 10px 16px 20px;
+    padding: 13px 10px 16px 20px;
     font-size: @fs-medium;
   }
 }
@@ -237,4 +237,68 @@ td {
 .tariffs__slider-button--current {
   border: 3px solid @basic-navy-blue;
   background-color: @basic-white;
+}
+
+.tariffs__name-hit {
+  position: relative;
+}
+
+.tariffs__name-hit--ribbon {
+  &::before {
+    position: absolute;
+    content: " ";
+    width: 74px;
+    height: 74px;
+    top: 0;
+    left: 0;
+    background-image: url("../../img/hit-ribbon.svg");
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    content: "Хит";
+    line-height: @lh-large;
+    color: @basic-white;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
+    z-index: 2;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      //position: absolute;
+      //content: " ";
+      width: 61px;
+      height: 61px;
+      top: 0;
+      left: 0;
+      background-image: url("../../img/hit-ribbon-tablet.svg");
+    }
+
+    &::after {
+      font-weight: @fw-medium;
+      top: 10px;
+      left: 6px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      width: 74px;
+      height: 74px;
+      top: 0;
+      left: 0;
+      background-image: url("../../img/hit-ribbon.svg");
+    }
+
+    &::after {
+      //position: absolute;
+      top: 13px;
+      left: 13px;
+    }
+  }
 }

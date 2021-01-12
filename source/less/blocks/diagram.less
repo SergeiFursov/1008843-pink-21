@@ -6,11 +6,17 @@
   @media (min-width: @tablet-width) {
     display: block;
     min-height: 330px;
+    background-image: url("../img/diagram-tablet.svg");
+    background-repeat: no-repeat;
+    background-position: 20px 100%;
     .wrapper-tablet();
   }
 
   @media (min-width: @desktop-width) {
     .bg-grey();
+    background-image: url("../img/diagram-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 131px 37px;
   }
 }
 
@@ -55,7 +61,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 129px 0 25px 0;
+    padding: 129px 0 23px 0;
   }
 
   br {
@@ -86,6 +92,7 @@
     }
     font-size: @fs-medium;
     line-height: @lh-large;
+    padding: 0 0 32px 0;
   }
 }
 

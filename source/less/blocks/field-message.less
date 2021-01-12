@@ -1,12 +1,12 @@
 .field-message {
   margin: 37px 0 0 0;
-  padding: 0 0 25px 0;
+  padding: 0 0 24px 0;
   width: 100%;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 59px 0;
-    padding: 0 58px 45px 58px;
+    padding: 0 58px 44px 58px;
     order: 4;
   }
 
@@ -43,14 +43,23 @@
   margin: 0 auto;
   padding: 13px 20px 0 20px;
   box-sizing: border-box;
-  min-height: 200px;
+  min-height: 201px;
   border: 2px solid @basic-gray;
   border-radius: 1px;
   resize: none;
   .input-text();
+  outline: none;
+
+  &:hover {
+    border-color: @basic-navy-blue;
+  }
+
+  &:focus {
+    border-color: @basic-purplish-red;
+  }
 
   @media (min-width: @tablet-width) {
-    min-height: 192px;
+    min-height: 193px;
   }
 
   @media (min-width: @desktop-width) {

@@ -3,7 +3,7 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  //position: relative;
+  position: relative;
   background-color: fade(@basic-black, 15%);
   //background-color: aquamarine;
 }
@@ -18,22 +18,23 @@
     background-color: fade(@basic-black, 15%);
     //outline: 5px solid greenyellow;
     //outline-offset: -5px;
-    z-index: 2;
+    z-index: 3;
   }
 }
 
 .page-header__wrapper {
   position: relative;
-  width: 100%;
-  max-width: 660px;
-  //height: 325px;
-  margin: 0 auto;
+  //width: 100%;
+  //max-width: 660px;
+  //height: 69px;
+  //margin: 0 auto;
+  //padding: 0 20px;
   background-color: @basic-navy-blue;
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
 
   @media (min-width: @tablet-width) {
-    max-width: 940px;
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -62,15 +63,15 @@
 .page-header__logo {
   //position: relative;
   display: flex;
-  justify-content: flex-start;
+  //justify-content: flex-start;
   align-items: center;
-  width: 73px;
+  width: 74px;
   margin: 0 auto 0 0;
   padding: 0 0 0 20px;
   height: 69px;
-
+  //
   fill: @basic-white;
-  //z-index: 10;
+  ////z-index: 10;
 
   &:hover {
     fill: @basic-purplish-red;
@@ -81,35 +82,69 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 145px;
     height: 106px;
-    padding-left: 40px;
+    padding-left: 20px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
+    padding: 0;
     //padding-left: 90px;
-    width: 109px;
+    //width: 109px;
     //background-color: transparent;
+  }
+}
+
+.page-header__logo-mobile {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+    //height: 106px;
+  }
+}
+
+.page-header__logo-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    width: 145px;
+    display: block;
+    //align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+    //padding-left: 90px;
+    //width: 109px;
+    //background-color: transparent;
+  }
+}
+
+.page-header__logo-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
 .page-header__img img {
   position: relative;
+  //position: absolute;
   display: block;
   margin: -69px auto 0 auto;
   padding: 0;
-  //width: 100%;
+  width: 100%;
   z-index: 1;
 
   @media (min-width: @tablet-width) {
-    width: 660px;
-    height: 729px;
     margin: -109px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1200px;
-    height: 853px;
+    //height: 853px;
     //margin: -109px 0 0 0;
   }
 }

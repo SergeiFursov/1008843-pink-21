@@ -10,7 +10,7 @@
 
   @media (min-width: @desktop-width) {
     width: 435px;
-    margin-top: 14px;
+    margin: 14px 0 56px 0;
   }
 }
 
@@ -48,12 +48,21 @@
 
 .field-user__text {
   width: 100%;
-  margin: 0 0 16px 0;
-  padding: 15px 10px 15px 20px;
+  margin: 0 0 17px 0;
+  padding: 15px 10px 14px 20px;
   box-sizing: border-box;
   /* width: 280px;*/
   /*  box-sizing: border-box;*/
   .input-text();
+  outline: none;
+
+  &:hover {
+    border-color: @basic-navy-blue;
+  }
+
+  &:focus {
+    border-color: @basic-purplish-red;
+  }
 
   @media (min-width: @tablet-width) {
     margin: 0;
