@@ -1,56 +1,46 @@
 //Application
 
 .application {
-  //margin: -69px 0 0 0;
-  //padding: 0;
-  //color: @basic-white;
-  //
-  //@media (min-width: @tablet-width) {
-  //  margin: -110px 0 0 0;
-  //}
-  //
-  //@media (min-width: @desktop-width) {
-  //  margin: -110px 0 0 0;
-  //}
-}
-
-.application__container {
   position: relative;
   top: -393px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   //width: 100%;
-  height: 664px;
+  height: 655px;
   margin: 0 0 -393px 0;
   //padding: 0 20px;
   text-align: center;
   z-index: 2;
-  //background-image: url("../../img/back-mobile-index.jpg");
-  //background-repeat: no-repeat;
-  //background-position: 50% 0;
-  //background-size: cover;
+  background-image: url("../img/app-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 0 98px;
 
   @media (min-width: @tablet-width) {
-    position: relative;
+    //position: relative;
     //width: 620p;
     top: -526px;
-    height: 0;
+    justify-content: center;
+    //height: 0;
     //margin: 0 0 -526px 0;
-    margin: 0 auto -13px auto;
-    //paddi
-    // ng: 0 20px;
+    margin: 0 auto -526px auto;
+    background-image: url("../../img/app-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
     z-index: 2;
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
-    top: 0;
-    left: 120px;
+    top: -643px;
+    //left: 10px;
     //margin: 0;
-    .wrapper-desktop();
+    width: 940px;
+    margin: 0 auto -643px auto;
+    padding: 0 10px;
     justify-content: flex-start;
-    //height: 855px;
+    background-image: url("../../img/app-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 25px 0;
   }
 }
 
@@ -68,6 +58,7 @@
   line-height: 29px;
   color: @basic-white;
   z-index: 1;
+  //background-color: aqua;
 
   @media (min-width: @tablet-width) {
     position: static;
@@ -85,7 +76,7 @@
     font-size: 50px;
     line-height: 68px;
     margin: 0;
-    padding: 210px 0 37px 0;
+    padding: 0 0 37px 0;
   }
 }
 
@@ -104,6 +95,7 @@
   min-height: 271px;
   background-color: @basic-navy-blue;
   color: @basic-white;
+  order: 1;
 
   @media (min-width: @tablet-width) {
     //justify-content: space-between;
@@ -112,7 +104,7 @@
     margin: 0;
     padding: 0 0 0 20px;
     background-color: transparent;
-    //order: 1;
+    order: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -203,5 +195,13 @@
   @media (min-width: @tablet-width) {
     width: 300px;
     font-size: @fs-medium;
+  }
+}
+
+.application__img img {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    top: 100px;
   }
 }
