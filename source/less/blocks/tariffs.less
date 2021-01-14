@@ -153,11 +153,6 @@ td {
   background: url("../img/no.svg");
 }
 
-
-//.tariffs__item {
-//  background-color: @basic-navy-blue;
-//}
-
 .tariffs__name {
   margin: 0;
   padding: 12px 20px 27px 20px;
@@ -182,7 +177,6 @@ td {
 
 .tariffs__list th:first-child {
   .bg-grey();
-  //border-top: none;
   empty-cells: hide;
 }
 
@@ -257,10 +251,10 @@ td {
   }
 
   &::after {
+    content: "Хит";
     position: absolute;
     top: 13px;
     left: 13px;
-    content: "Хит";
     line-height: @lh-large;
     color: @basic-white;
     text-transform: uppercase;

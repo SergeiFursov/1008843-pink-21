@@ -4,31 +4,31 @@
   position: relative;
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% auto;
   background-position: 50% 0;
   top: -69px;
   margin: 0 0 -69px 0;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/back-mobile@2x.jpg");
-    //background-size: 320px auto;
+    background-size: 640px auto;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: 400px) {
     background-image: url("../img/back-tablet.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: 50% 0;
     top: -109px;
     margin: 0 0 -109px 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/back-tablet@2x.jpg");
-      //background-size: auto;
+      background-size: 1280px auto;
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: 800px) {
     background-image: url("../img/back-desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,8 +54,6 @@
   background-image: url("../img/app-mobile.png");
   background-repeat: no-repeat;
   background-position: 0 176px;
-  //background-size: contain;
-
 
   @media (min-width: @tablet-width) {
     //position: relative;
@@ -69,8 +67,6 @@
     background-image: url("../img/app-tablet.png");
     background-repeat: no-repeat;
     background-position: 0 100%;
-    z-index: 2;
-    //background-size: contain;
   }
 
   @media (min-width: @desktop-width) {
@@ -84,7 +80,6 @@
     background-image: url("../img/app-desktop.png");
     background-repeat: no-repeat;
     background-position: 27px 100%;
-    //background-size: contain;
   }
 }
 
@@ -95,16 +90,12 @@
   top: 70px;
   right: 0;
   left: 0;
-  //margin: 0 0 -373px 0;
   padding: 0;
-  //width: auto;
-  //min-height: 47px;
   font-weight: @fw-small;
   font-size: @fs-large;
   line-height: 29px;
   color: @basic-white;
   z-index: 1;
-  //background-color: aqua;
 
   @media (min-width: @tablet-width) {
     top: 44px;
