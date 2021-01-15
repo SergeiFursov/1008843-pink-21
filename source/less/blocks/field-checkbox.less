@@ -6,7 +6,7 @@
   @media (min-width: @tablet-width) {
     order: 3;
     background-color: @basic-white;
-    margin: 19px 0 59px 0;
+    margin: 19px 0 58px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,7 +22,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
+    //width: 100%;
   }
 }
 
@@ -55,11 +55,11 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding: 42px 58px 37px 58px;
+    padding: 42px 40px 37px 58px;
     /*min-height: 230px;*/
     display: grid;
     grid-template-rows: 60px 60px;
-    grid-template-columns: 1fr, 240px, 210px;
+    grid-template-columns: 265px 245px 210px;
     grid-auto-flow: column;
     /* justify-content: center;
      align-content: center;
@@ -71,12 +71,15 @@
 
 .field-checkbox__item {
   margin: 0 0 52px 0;
-  padding-left: 59px;
-  //outline: 2px solid red;
-  //outline-offset: -2px;
+
+  &:last-child {
+    margin: 0 0 47px 0;
+  }
 
   @media (min-width: @tablet-width) {
-    //padding-left: 59px;
+    &:last-child {
+      margin: 0 0 53px 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -89,12 +92,93 @@
 }
 
 .field-checkbox__label {
-  //padding-left: 59px;
+  position: relative;
+  display: block;
+  padding: 0 0 0 59px;
   .label-dark();
+  cursor: pointer;
+  user-select: none;
 
   @media (min-width: @desktop-width) {
     //width: auto;
     margin: 0;
     //padding: 0 0 0 59px;
   }
+}
+
+.field-checkbox__input + .field-checkbox__label::before {
+  content: " ";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 39px;
+  height: 39px;
+  background-image: url("../img/checkbox-off.svg");
+  cursor: pointer;
+}
+
+.field-checkbox__input:hover + .field-checkbox__label::before {
+  content: " ";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 39px;
+  height: 39px;
+  background-image: url("../img/checkbox-on.svg");
+  //cursor: pointer;
+}
+
+.field-checkbox__input:active + .field-checkbox__label::before {
+  content: " ";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 39px;
+  height: 39px;
+  background-image: url("../img/checkbox-down.svg");
+  //cursor: pointer;
+}
+
+.field-checkbox__input:checked + .field-checkbox__label::before {
+  content: " ";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 39px;
+  height: 39px;
+  background-image: url("../img/checkbox-off.svg");
+  cursor: pointer;
+}
+
+.field-checkbox__input:checked + .field-checkbox__label::after {
+  content: " ";
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/tick.svg");
+  cursor: pointer;
+}
+
+.field-checkbox__input:checked:hover + .field-checkbox__label::before {
+  content: " ";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 39px;
+  height: 39px;
+  background-image: url("../img/checkbox-on.svg");
+  cursor: pointer;
+}
+
+.field-checkbox__input:checked:active + .field-checkbox__label::before {
+  content: " ";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 39px;
+  height: 39px;
+  background-image: url("../img/checkbox-down.svg");
+  cursor: pointer;
 }

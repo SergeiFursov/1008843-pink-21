@@ -13,6 +13,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin: 73px 0 0 0;
     padding: 0;
   }
 }
@@ -27,6 +28,7 @@
 }
 
 .copyright__icon {
+  display: block;
   fill: @basic-purplish-red;
 
   &:hover {
@@ -35,5 +37,11 @@
 
   &:active {
     fill: fade(@basic-navy-blue, 30%);
+  }
+}
+
+.copyright__link {
+  @media (min-width: @tablet-width) {
+    padding: 8px 0 0 0;
   }
 }

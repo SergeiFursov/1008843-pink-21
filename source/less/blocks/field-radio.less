@@ -18,6 +18,7 @@
 
   @media (min-width: @desktop-width) {
     width: 431px;
+    margin: 0 0 56px 0;
   }
 }
 
@@ -46,18 +47,20 @@
 
   @media (min-width: @desktop-width) {
     //margin: 0 0 46px 0;
-    padding: 48px 74px 57px 74px;
+    padding: 48px 74px 57px 72px;
   }
 }
 
 .field-radio__item {
   margin: 0 0 45px 0;
-  padding: 0 0 0 70px;
-  //.outline();
+
+  &:last-child {
+    margin: 0 0 46px 0;
+  }
 
   @media (min-width: @tablet-width) {
     margin: 0 0 45px 0;
-    padding: 0 0 0 60px;
+    //padding: 0 0 0 60px;
 
     &:last-child {
       margin: 0;
@@ -66,17 +69,96 @@
 
   @media (min-width: @desktop-width) {
     margin: 0 0 46px 0;
-    padding: 0 0 0 59px;
+    //padding: 0 0 0 59px;
   }
 }
 
 .field-radio__label {
+  position: relative;
+  display: block;
   margin: 0;
-
+  padding: 0 0 0 70px;
   .label-dark();
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    //.outline();
+    padding: 0 0 0 61px;
   }
+}
+
+.field-radio__input + .field-radio__label::before {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 41px;
+  height: 41px;
+  background-image: url("../img/radio-off.svg");
+  cursor: pointer;
+}
+
+.field-radio__input:hover + .field-radio__label::before {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 41px;
+  height: 41px;
+  background-image: url("../img/radio-on.svg");
+  cursor: pointer;
+}
+
+.field-radio__input:active + .field-radio__label::before {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 41px;
+  height: 41px;
+  background-image: url("../img/radio-down.svg");
+  cursor: pointer;
+}
+
+.field-radio__input:checked + .field-radio__label::before {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 41px;
+  height: 41px;
+  background-image: url("../img/radio-off.svg");
+  cursor: pointer;
+}
+
+.field-radio__input:checked + .field-radio__label::after {
+  content: " ";
+  position: absolute;
+  top: 8px;
+  left: 13px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/radio-button.svg");
+  cursor: pointer;
+}
+
+.field-radio__input:checked:hover + .field-radio__label::before {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 41px;
+  height: 41px;
+  background-image: url("../img/radio-on.svg");
+  cursor: pointer;
+}
+
+.field-radio__input:checked:active + .field-radio__label::before {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 41px;
+  height: 41px;
+  background-image: url("../img/radio-down.svg");
+  cursor: pointer;
 }

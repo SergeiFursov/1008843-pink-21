@@ -11,7 +11,7 @@
 
 .main-navigation__toggle {
   position: absolute;
-  top: -45px;
+  top: -48px;
   right: 20px;
   z-index: 200;
   display: block;
@@ -24,7 +24,7 @@
   //background-color: #d22856;
 
   @media (min-width: @tablet-width) {
-    top: -70px;
+    top: -64px;
     right: 20px;
   }
 
@@ -42,17 +42,17 @@
     width: 50px;
     height: 4px;
     background-color: @basic-white;
-    box-shadow: 0 9px 0 0 @basic-white, 0 18px 0 0 @basic-white;
+    box-shadow: 0 10px 0 0 @basic-white, 0 20px 0 0 @basic-white;
   }
 
   &:hover::before {
     background-color: @basic-purplish-red;
-    box-shadow: 0 9px 0 0 @basic-purplish-red, 0 18px 0 0 @basic-purplish-red;
+    box-shadow: 0 10px 0 0 @basic-purplish-red, 0 20px 0 0 @basic-purplish-red;
   }
 
   &:active::before {
     background-color: fade(@basic-purplish-red, 30%);
-    box-shadow: 0 9px 0 0 fade(@basic-purplish-red, 30%), 0 18px 0 0 fade(@basic-purplish-red, 30%);
+    box-shadow: 0 10px 0 0 fade(@basic-purplish-red, 30%), 0 20px 0 0 fade(@basic-purplish-red, 30%);
   }
 }
 

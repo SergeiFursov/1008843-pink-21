@@ -8,11 +8,16 @@
 
 .advantages__header {
   margin: 0;
-  padding: 42px 0 0 0;
+  padding: 40px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 45px 0 0 0;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
-    padding: 63px 0 57px 0;
+    padding: 54px 0 57px 0;
   }
 }
 
@@ -26,7 +31,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
-    padding: 2px 0 0 0;
+    padding: 0;
     font-size: 40px;
     line-height: 54px;
   }
@@ -59,13 +64,13 @@
     flex-direction: row;
     position: relative;
     justify-content: flex-end;
-    height: 487px;
+    height: 489px;
     //margin: 0 auto;
     padding: 28px 0 0 0;
     z-index: 1;
     background: url("../img/adv-tablet.png");
-    //background-repeat: no-repeat;
-    background-position: 0 6px;
+    background-repeat: no-repeat;
+    background-position: 0 8px;
     background-size: cover;
   }
 
@@ -76,7 +81,7 @@
     margin: 0;
     padding: 0;
     background: url("../img/adv-desktop.png");
-    //background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
   }
@@ -90,7 +95,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 75px 20px 0 20px;
+    padding: 77px 20px 0 20px;
     height: 410px;
     text-align: left;
     //min-height: 390px;
@@ -120,7 +125,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
+    //align-items: center;
     width: 300px;
     min-height: 205px;
     margin: 0 20px 0 0;
@@ -179,13 +184,13 @@
     font-size: @fs-medium;
     line-height: @lh-large;
     order: 1;
-    padding-bottom: 40px;
+    padding: 0 0 40px 0;
   }
 }
 
 .advantages__item--makes .advantages__description {
   //height: 340px;
-  padding: 0 0 24px 0;
+  padding: 0 0 27px 0;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -213,8 +218,7 @@
     position: absolute;
     display: block;
     top: 0;
-    width: 186px;
-    height: 382px;
+    left: 55px;
     z-index: 2;
   }
 }
@@ -227,16 +231,16 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     left: 20px;
-    top: 29px;
+    top: 36px;
     //z-index: 3;
-    width: 268px;
-    height: 547px;
+    //width: 268px;
+    //height: 547px;
   }
 
   @media (min-width: @desktop-width) {
     //position: static;
-    width: 186px;
-    height: 382px;
+    //width: 186px;
+    //height: 382px;
     //margin: 0 auto;
     top: 0;
     left: 0;
@@ -266,10 +270,6 @@
 
 .br-desktop {
   display: none;
-
-  //@media (min-width: @tablet-width) {
-  //  display: none;
-  //}
 
   @media (min-width: @desktop-width) {
     display: block;
