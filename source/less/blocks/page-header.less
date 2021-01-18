@@ -50,8 +50,9 @@
 }
 
 .page-header__wrapper.page-header--closed {
-  height: 69px;
+  height: 66px;
   background-color: fade(@basic-black, 15%);
+  //background-color: aqua;
 
   @media (min-width: @tablet-width) {
     height: 109px;
@@ -67,10 +68,10 @@
   display: flex;
   //justify-content: flex-start;
   align-items: center;
-  width: 74px;
+  width: 67px;
   margin: 0 auto 0 0;
   padding: 0 0 0 20px;
-  height: 69px;
+  min-height: 74px;
   //
   fill: @basic-white;
   ////z-index: 10;
@@ -100,6 +101,8 @@
 
 .page-header__logo-mobile {
   display: block;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -139,8 +142,8 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 50% 0;
-  top: -69px;
-  margin: 0 0 -69px 0;
+  top: -66px;
+  margin: 0 0 -66px 0;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/back-mobile@2x.jpg");
