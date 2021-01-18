@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 154px 0 0 0;
+  margin: 155px 0 0 0;
   .bg-grey();
   //background-color: greenyellow;
 
@@ -11,15 +11,17 @@
   }
 
   @media (min-width: @desktop-width) {
+    //flex-direction: row;
     width: 940px;
     margin: 136px auto 28px auto;
     padding: 0 10px;
+    background-color: @basic-white;
   }
 }
 
 .upload-photo__intro {
   position: absolute;
-  top: -146px;
+  top: -131px;
   margin: 0 auto;
   padding: 0 20px 0 20px;
   line-height: @lh-large;
@@ -39,17 +41,17 @@
   }
 
   @media (min-width: @desktop-width) {
+    top: -127px;
     margin: 0 auto 75px auto;
     padding: 0 10px;
   }
 }
 
 .upload-photo__form {
-  margin: 0;
-  padding: 20px 0 40px 0;
+  margin: 0 auto;
+  padding: 20px 0 42px 0;
   display: flex;
   flex-direction: column;
-  /* background-color: aqua;*/
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -63,16 +65,19 @@
     grid-template-columns: 300px 1fr;
     column-gap: 90px;
     margin: 0;
-    padding: 55px 10px 55px 80px;
+    padding: 57px 10px 57px 80px;
     .bg-grey();
   }
 }
 
-.upload-photo__image {
-  .wrapper();
+
+.upload-photo__preview {
+  display: block;
+  position: relative;
   width: 100%;
   height: 375px;
-  margin: 0 0 40px 0;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
@@ -84,34 +89,46 @@
   }
 }
 
+.upload-photo__preview img {
+  display: block;
+}
+
 .upload-photo__container {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
+    margin: 0 0 0 auto;
+    padding: 0;
+    width: 275px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 410px;
     margin: 0;
     padding: 0;
   }
 }
 
 .upload-photo__list {
-  position: relative;
+  //position: relative;
   display: flex;
-  //justify-content: space-evenly;
-  margin: 0 auto 60px 32px;
+  margin: 0 0 60px 0;
   padding: 0;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     justify-content: normal;
-    margin: 0;
+    margin: 0 0 68px 0;
     padding: 0;
-    width: 300px;
-    height: 260px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 80px 0;
+    //margin: 0 0 95px 0;
     padding: 0;
   }
 }
@@ -120,78 +137,221 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 0 0 47px 0;
+  margin: 0 0 48px 0;
+  padding: 0;
 
-  label {
-    margin: 0 35px 0 0;
+  &::after {
+    display: none;
+    position: absolute;
+    top: 102px;
+    right: 0;
+    content: " ";
+    border: 1px solid fade(@basic-navy-blue, 10%);
   }
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    margin: 0 0 17px 0;
+    //justify-content: space-between;
+    margin: 9px 0 30px 4px;
+
+    &::after {
+      display: block;
+      width: 275px;
+      top: 45px;
+      right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: -2px 0 29px 0;
+
+    &::after {
+      display: block;
+      width: 408px;
+      top: 57px;
+      left: 0;
+    }
   }
 }
 
-.upload-photo__scale {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-    width: 202px;
-    margin: 0;
-    padding: 0;
+.upload-photo__item:last-child {
+  @media (min-width: @desktop-width) {
+    &::after {
+      display: none;
+    }
   }
 }
 
-.upload-photo__scale--active {
+.upload-photo__item--current .upload-photo__scale {
   position: absolute;
-  top: 76px;
-  left: -25px;
+  top: 78px;
+  left: 20px;
   right: 0;
   display: block;
   width: 240px;
+  margin: 6px 0;
+  background-color: transparent;
+  appearance: none;
 
   &::after {
     position: absolute;
-    top: 42px;
-    left: -30px;
+    top: 35px;
+    left: -40px;
     content: " ";
-    width: 310px;
+    width: 318px;
     border: 1px solid fade(@basic-navy-blue, 10%);
   }
 
   @media (min-width: @tablet-width) {
     position: static;
-    width: 185px;
-
+    width: 202px;
+    //
     &::after {
-      top: 55px;
-      left: 0;
+      display: none;
+      //top: 55px;
+      //left: 0;
+      //width: 275px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+  }
+}
+
+.upload-photo__item-fill {
+  @media (min-width: @tablet-width) {
+    margin: 22px 0 20px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 31px 0;
+  }
+}
+
+.upload-photo__item-contrast {
+  @media (min-width: @tablet-width) {
+    margin: 30px 0 27px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.upload-photo__label-crop {
+  margin: 1px 35px -1px 37px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 29px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 48px 0 0;
+  }
+}
+
+.upload-photo__label-fill {
+  margin: 2px 35px -2px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 27px 0 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 44px 0 0;
+  }
+}
+
+.upload-photo__label-contrast {
+  margin: 7px 0 -7px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 31px 0 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 4px 53px 0 6px;
+  }
+}
+
+.upload-photo__label .icon {
+  fill: fade(@basic-navy-blue, 30%);
+
+  &:hover {
+    fill: fade(@basic-navy-blue, 50%);
+    cursor: pointer;
+  }
+
+  @media (min-width: @tablet-width) {
+    fill: @basic-purplish-red;
+  }
+}
+
+.upload-photo__item--current .icon {
+  fill: @basic-purplish-red;
+  opacity: 1;
+}
+
+.icon {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.icon-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
 .upload-photo__button {
   width: 100%;
   box-sizing: border-box;
-  height: 57px;
+  height: 55px;
   margin: 0;
   padding: 0;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+
 
   @media (min-width: @tablet-width) {
     grid-column: 2 / span 3;
     margin: 0;
     padding: 0;
+    width: 260px;
   }
 
   @media (min-width: @desktop-width) {
     width: 183px;
+    align-self: flex-end;
   }
 }
 
 .upload-photo__button--send {
   .btn-red();
   margin: 0 0 11px 0;
+  border: 3px solid @basic-purplish-red;
+
+  &:hover {
+    background-color: @basic-purplish-red;
+    color: @basic-white;
+  }
+
+  &:active {
+    color: fade(@basic-white, 30%);
+  }
 
   @media (min-width: @tablet-width) {
     margin: 0 0 24px 0;
@@ -203,6 +363,195 @@
 }
 
 .upload-photo__button--cancel {
-  //margin-bottom: 40px;
   .btn-grey();
+  border: 3px solid fade(@basic-navy-blue, 10%);
+
+  &:hover {
+    border: 3px solid fade(@basic-navy-blue, 30%);
+    color: fade(@basic-navy-blue, 30%);
+  }
+
+  &:active {
+    border: none;
+    background-color: fade(@basic-navy-blue, 30%);
+    color: fade(@basic-white, 30%);
+  }
 }
+
+//.upload-photo__scale {
+//  //display: none;
+//
+//  @media (min-width: @tablet-width) {
+//    display: block;
+//    width: 202px;
+//    margin: 0;
+//    padding: 0;
+//
+//    &::after {
+//      position: absolute;
+//      top: 55px;
+//      left: 0;
+//      content: " ";
+//      width: 310px;
+//      border: 1px solid fade(@basic-navy-blue, 10%);
+//    }
+//  }
+//
+//  @media (min-width: @desktop-width) {
+//    width: 288px;
+//
+//    &::after {
+//      width: 410px;
+//    }
+//  }
+//}
+
+.upload-photo__scale {
+  display: none;
+  //width: 240px;
+  //margin: 6px 0;
+  //background-color: transparent;
+  //-webkit-appearance: none;
+
+  //&::after {
+  //  position: absolute;
+  //  top: 42px;
+  //  left: -43px;
+  //  content: " ";
+  //  width: 319px;
+  //  border: 1px solid fade(@basic-navy-blue, 10%);
+  //}
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 202px;
+    margin: 6px 0;
+    background-color: transparent;
+    appearance: none;
+    padding: 0;
+
+    //&::after {
+    //  position: absolute;
+    //  top: 55px;
+    //  left: 0;
+    //  content: " ";
+    //  width: 275px;
+    //  border: 1px solid fade(@basic-navy-blue, 10%);
+    //}
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    //margin: 0 80px 0 0;
+
+    &::after {
+      top: 56px;
+      width: 410px;
+    }
+  }
+}
+
+.upload-photo__scale:focus {
+  outline: none;
+}
+
+.upload-photo__scale::-webkit-slider-runnable-track {
+  background: @basic-navy-blue;
+  border: 0 solid rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+}
+
+.upload-photo__scale::-webkit-slider-thumb {
+  margin-top: -6px;
+  width: 14px;
+  height: 14px;
+  background: @basic-white;
+  border: 2px solid @basic-purplish-red;
+  border-radius: 50px;
+  cursor: pointer;
+  appearance: none;
+}
+
+.upload-photo__item--current .upload-photo__scale::-webkit-slider-thumb {
+  @media (min-width: @tablet-width) {
+    background-color: @basic-purplish-red;
+  }
+}
+
+//input[type=range].upload-photo__scale:focus::-webkit-slider-runnable-track {
+//  background: #314355;
+//}
+
+//.upload-photo__scale::-moz-range-track {
+//  background: @basic-purplish-red;
+//  border: 0 solid rgba(0, 0, 0, 0);
+//  border-radius: 2px;
+//  width: 100%;
+//  height: 2px;
+//  cursor: pointer;
+//}
+//
+//.upload-photo__scale::-moz-range-thumb {
+//  width: 14px;
+//  height: 14px;
+//  background: #ffffff;
+//  border: 2px solid #d22856;
+//  border-radius: 50px;
+//  cursor: pointer;
+//}
+//
+//.upload-photo__scale::-ms-track {
+//  background: transparent;
+//  border-color: transparent;
+//  border-width: 6px 0;
+//  color: transparent;
+//  width: 100%;
+//  height: 2px;
+//  cursor: pointer;
+//}
+
+//input[type=range].upload-photo__scale::-ms-fill-lower {
+//  background: #1f2935;
+//  border: 0px solid rgba(0, 0, 0, 0);
+//  border: 0;
+//  border-radius: 4px;
+//}
+
+//input[type=range].upload-photo__scale::-ms-fill-upper {
+//  background: #283645;
+//  border: 0px solid rgba(0, 0, 0, 0);
+//  border: 0;
+//  border-radius: 4px;
+//}
+
+//input[type=range].upload-photo__scale::-ms-thumb {
+//  width: 14px;
+//  height: 14px;
+//  background: #ffffff;
+//  border: 2px solid #d22856;
+//  border-radius: 50px;
+//  cursor: pointer;
+//  margin-top: 0px;
+//  /*Needed to keep the Edge thumb centred*/
+//}
+//
+//input[type=range].upload-photo__scale:focus::-ms-fill-lower {
+//  background: #283645;
+//}
+//
+//input[type=range].upload-photo__scale:focus::-ms-fill-upper {
+//  background: #314355;
+//}
+
+///*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+//how to remove the virtical space around the range input in IE*/
+//@supports (-ms-ime-align:auto) {
+//  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+//  input[type=range].upload-photo__scale {
+//    margin: 0;
+//    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+//  }
+//}

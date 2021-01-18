@@ -62,9 +62,14 @@
 }
 
 .card-user__wrapper--hit {
+  margin: 0;
+  padding: 18px 10px 5px 17px;
+
   @media (min-width: @tablet-width) {
     position: relative;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     height: 87px;
     padding: 23px 30px 10px 30px;
   }
@@ -83,12 +88,11 @@
 
 .card-user__name--hit {
   margin: 0;
-  //background-color: greenyellow;
 
   @media (min-width: @tablet-width) {
     margin: 0 auto 0 0;
     padding: 0;
-    height: 25px;
+    height: 10px;
   }
 }
 
@@ -111,8 +115,10 @@
   }
 }
 
-
 .card-user__description--bottom {
+  margin: 0;
+  padding: 0;
+
   @media (min-width: @tablet-width) {
     margin: 0;
     padding: 0;
@@ -138,23 +144,24 @@
 
 .card-user__inner--hit {
   @media (min-width: @tablet-width) {
-    margin: 0;
+    //display: block;
+    margin: 8px 0 -8px 0;
     padding: 0;
-    height: 28px;
-    position: absolute;
-    right: 30px;
+    width: 125px;
+    height: 12px;
   }
 }
 
 .card-user__button-like {
   margin: 0 20px 0 0;
-  //padding-bottom: 0;
+  padding: 0;
   border: none;
   outline: none;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 0 auto;
+    padding: 0;
   }
 }
 
@@ -170,4 +177,16 @@
   padding: 0;
   font-size: 12px;
   text-transform: uppercase;
+}
+
+.card-user__like-hit {
+  font-size: 12px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
 }
