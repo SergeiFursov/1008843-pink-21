@@ -35,17 +35,16 @@
 .page-footer__logo {
   margin: 0 0 32px 0;
   padding: 0;
+  fill: @basic-navy-blue;
 
-  &:hover .page-footer__logo-text {
+  &:hover {
     fill: @basic-purplish-red;
+    cursor: pointer;
   }
 
-  &:active .page-footer__logo-text {
-    fill: fade(@basic-black, 30%);
-  }
-
-  &:active .page-footer__logo-glass {
-    fill: fade(@basic-purplish-red, 30%);
+  &:active {
+    fill: @basic-black;
+    opacity: 30%;
   }
 
   @media (min-width: @tablet-width) {
@@ -57,32 +56,6 @@
     margin: 70px 236px 0 0;
     padding: 0;
     height: 40px;
-
-    &:hover .page-footer__logo-black-stars {
-      fill: @basic-purplish-red;
-    }
-
-    &:active .page-footer__logo-black-stars {
-      fill: fade(@basic-black, 30%);
-    }
-
-    &:active .page-footer__logo-red-star {
-      fill: fade(@basic-purplish-red, 30%);
-    }
-  }
-}
-
-.page-footer__logo-mobile {
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.page-footer__logo-desktop {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
   }
 }
 
