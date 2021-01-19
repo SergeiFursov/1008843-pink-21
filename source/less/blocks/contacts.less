@@ -14,7 +14,7 @@
 
   @media (min-width: @desktop-width) {
     width: 940px;
-    padding: 42px 10px 0 10px;
+    padding: 54px 10px 0 10px;
   }
 }
 
@@ -131,10 +131,6 @@
     color: fade(@basic-navy-blue, 30%);
     text-decoration: none;
   }
-
-  //@media (min-width: @desktop-width) {
-  //  align-content: flex-start;
-  //}
 }
 
 //Map
@@ -146,7 +142,7 @@
   position: relative;
   height: 200px;
   background-color: @basic-gray;
-  clip-path: polygon(50% 29%, 100% 15%, 100% 100%, 0 100%, 0 15%);
+  clip-path: polygon(50% 29%, 100% 14%, 100% 100%, 0 100%, 0 14%);
 
 
   &::before {
@@ -162,25 +158,30 @@
   }
 
   @media (min-width: @tablet-width) {
-    height: 376px;
+    height: 378px;
     margin: 0;
     padding: 22px 0 0 0;
-    clip-path: polygon(50% 23%, 100% 6%, 100% 100%, 0 100%, 0 6%);
+    clip-path: polygon(50% 23%, 100% 5%, 100% 100%, 0 100%, 0 5%);
 
     &::before {
       top: 218px;
       left: 312px;
+      right: 0;
+      bottom: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
-    height: 494px;
-    padding: 20px 0 0 0;
-    clip-path: polygon(50% 22%, 100% 6%, 100% 100%, 0 100%, 0 6%);
+    height: 489px;
+    padding: 24px 0 0 0;
+    //clip-path: polygon(50% 22%, 0 0, 100% 0);
+    clip-path: polygon(50% 21%, 100% 1%, 100% 100%, 0 100%, 0 1%);
 
     &::before {
       top: 275px;
-      left: 463px;
+      left: 582px;
+      right: 0;
+      bottom: 0;
     }
   }
 }
