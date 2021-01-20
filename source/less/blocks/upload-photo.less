@@ -123,12 +123,11 @@
   @media (min-width: @tablet-width) {
     flex-direction: column;
     justify-content: normal;
-    margin: 0 0 68px 0;
+    margin: 0 0 71px 0;
     padding: 0;
   }
 
   @media (min-width: @desktop-width) {
-    //margin: 0 0 95px 0;
     padding: 0;
   }
 }
@@ -152,12 +151,12 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     //justify-content: space-between;
-    margin: 9px 0 30px 4px;
+    margin: 2px 0 15px 4px;
 
     &::after {
       display: block;
-      width: 275px;
-      top: 45px;
+      width: 272px;
+      top: 52px;
       right: 0;
     }
   }
@@ -205,7 +204,7 @@
   @media (min-width: @tablet-width) {
     position: static;
     width: 202px;
-    //
+
     &::after {
       display: none;
       //top: 55px;
@@ -221,7 +220,12 @@
 
 .upload-photo__item-fill {
   @media (min-width: @tablet-width) {
-    margin: 22px 0 20px 0;
+    margin: 25px 0 20px 0;
+
+    &::after {
+      top: 50px;
+      right: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -231,7 +235,12 @@
 
 .upload-photo__item-contrast {
   @media (min-width: @tablet-width) {
-    margin: 30px 0 27px 0;
+    margin: 23px 0 20px 0;
+
+    &::after {
+      top: 46px;
+      right: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -243,7 +252,7 @@
   margin: 1px 35px -1px 37px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 29px 0 0;
+    margin: 7px 29px 0 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -255,7 +264,7 @@
   margin: 2px 35px -2px 0;
 
   @media (min-width: @tablet-width) {
-    margin: 0 27px 0 3px;
+    margin: 5px 28px -5px 3px;
   }
 
   @media (min-width: @desktop-width) {
@@ -267,7 +276,7 @@
   margin: 7px 0 -7px 0;
 
   @media (min-width: @tablet-width) {
-    margin: 0 31px 0 7px;
+    margin: 3px 31px -3px 7px;
   }
 
   @media (min-width: @desktop-width) {
@@ -293,25 +302,39 @@
   opacity: 1;
 }
 
-.icon {
+.icon-crop {
   @media (min-width: @tablet-width) {
-    display: none;
+    width: 22px;
+    height: 22px;
   }
 
   @media (min-width: @desktop-width) {
-    display: block;
+    width: 100%;
+    height: 100%;
   }
 }
 
-.icon-tablet {
-  display: none;
-
+.icon-fill {
   @media (min-width: @tablet-width) {
-    display: block;
+    width: 24px;
+    height: 23px;
   }
 
   @media (min-width: @desktop-width) {
-    display: none;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.icon-contrast {
+  @media (min-width: @tablet-width) {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    height: 100%;
   }
 }
 
