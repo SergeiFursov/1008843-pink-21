@@ -112,7 +112,7 @@ const clean = () => {
 
 // Server
 
-const server = (done) => {
+const server = () => {
   sync.init({
     server: {
       baseDir: 'build'
@@ -122,7 +122,6 @@ const server = (done) => {
     ui: false,
 
   });
-  done();
 }
 
 exports.server = server;
@@ -141,7 +140,11 @@ const watcher = () => {
 const build = gulp.series(
   clean,
   gulp.parallel(
-    html
+    html,
+    styles,
+    scripts,
+    createWebp,
+    copy
   ));
 
 exports.build = build;
