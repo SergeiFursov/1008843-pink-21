@@ -144,6 +144,8 @@ const build = gulp.series(
     styles,
     scripts,
     createWebp,
+    sprite,
+    images,
     copy
   ));
 
@@ -157,6 +159,7 @@ exports.default = gulp.series(
     html,
     styles,
     scripts,
+    sprite,
     createWebp,
     copy
   ),
