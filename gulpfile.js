@@ -90,7 +90,7 @@ exports.sprite = sprite;
 
 //Copy
 
-const copy = (done) => {
+const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
@@ -99,7 +99,6 @@ const copy = (done) => {
     base: "source"
   })
     .pipe(gulp.dest("build"))
-  done();
 }
 
 exports.copy = copy;
@@ -112,7 +111,7 @@ const clean = () => {
 
 // Server
 
-const server = () => {
+const server = (done) => {
   sync.init({
     server: {
       baseDir: 'build'
@@ -122,6 +121,7 @@ const server = () => {
     ui: false,
 
   });
+  done();
 }
 
 exports.server = server;
