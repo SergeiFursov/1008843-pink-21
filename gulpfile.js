@@ -48,7 +48,7 @@ const scripts = () => {
     .pipe(gulp.dest("build"))
     .pipe(uglify())
     .pipe(rename({suffix: ".min"}))
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("build"))
     .pipe(sync.stream());
 }
 
