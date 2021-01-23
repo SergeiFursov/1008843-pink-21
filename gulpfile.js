@@ -43,12 +43,14 @@ exports.styles = styles;
 
 //Scripts
 
-const scripts = () => {
-  return gulp.src("source/js/**/*.js")
-    .pipe(gulp.dest("build"))
+const script = () => {
+  return gulp.src("source/js/*.js")
     .pipe(uglify())
-    .pipe(rename({suffix: ".min"}))
-    .pipe(gulp.dest("build"))
+    .pipe(rename(function (path) {
+      path.basename += ".min";
+      path.extname = ".js";
+    }))
+    .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
 
