@@ -44,12 +44,9 @@ exports.styles = styles;
 //Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/*.js")
+  return gulp.src("source/js/script.js")
     .pipe(uglify())
-    .pipe(rename(function (path) {
-      path.basename += ".min";
-      path.extname = ".js";
-    }))
+    .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
@@ -145,7 +142,6 @@ const build = gulp.series(
   gulp.parallel(
     html,
     styles,
-    scripts,
     createWebp,
     sprite,
     images,
