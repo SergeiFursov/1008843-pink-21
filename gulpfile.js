@@ -43,7 +43,7 @@ exports.styles = styles;
 
 //Scripts
 
-const script = () => {
+const scripts = () => {
   return gulp.src("source/js/*.js")
     .pipe(uglify())
     .pipe(rename(function (path) {
