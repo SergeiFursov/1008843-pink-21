@@ -144,6 +144,7 @@ const build = gulp.series(
     styles,
     createWebp,
     sprite,
+    scripts,
     images,
     copy
   )
