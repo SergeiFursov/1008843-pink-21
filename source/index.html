@@ -5,9 +5,8 @@
   <title>HTML Academy: Пинк</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preload" href="/fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-<!--  <link href="https://fonts.googles.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">-->
   <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
 </head>
@@ -101,6 +100,12 @@
         3.9361 2.328-.933.6092-.0211.0122-2.9714-1.7416-.0106 1.2253 1.9469 1.1342-1.9874 1.1868-11.6182-6.8721
         11.6376-6.9579 11.7995 6.8336zm0-1.2253L13.4401 5.3108 1.7656 12.2195V2.9897L13.5 1.7644l11.7344 1.2253v9.2369z"/>
   </symbol>
+  <symbol id="left-arrow" viewBox="0 0 22 41">
+    <path d="M2.041 20.503L21.748 1.415A.821.821 0 0022 .83a.801.801 0 00-.252-.585A.86.86 0 0021.14 0a.882.882 0 00-.608.245L.252 19.909a.832.832 0 00-.252.59.81.81 0 00.253.59l20.279 19.673a.894.894 0 00.613.238.877.877 0 00.473-.143.838.838 0 00.313-.372.809.809 0 00-.183-.902L2.041 20.503z"/>
+  </symbol>
+  <symbol id="right-arrow" viewBox="0 0 22 41">
+    <path d="M19.959 20.497L.252 39.585A.822.822 0 000 40.17a.801.801 0 00.252.585A.86.86 0 00.86 41a.88.88 0 00.608-.245l20.28-19.664a.834.834 0 00.252-.59.811.811 0 00-.253-.59L1.468.239A.894.894 0 00.855 0a.878.878 0 00-.473.143.838.838 0 00-.313.372.81.81 0 00.183.902l19.707 19.08z"/>
+  </symbol>
 </svg>
 <header class="page-header">
   <div class="page-header__container">
@@ -180,7 +185,8 @@
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--cheers-up">
           <h3 class="advantages__title">Поднимает настроение</h3>
-          <p class="advantages__description">Приложение позволит вам<br class="br-desktop"> победить<br class="br-mobile"> осеннюю хандру<br class="br-desktop"> и депрессию<br class="br-mobile"> буквально в<br class="br-tablet"> несколько кликов!</p>
+          <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию
+            <!--<br class="br-mobile">--> буквально в<!--<br class="br-tablet">--> несколько кликов!</p>
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/adv-desktop-one.webp 1x, img/adv-desktop-one@2x.webp 2x">
             <img src="img/adv-desktop-one.png" srcset="img/adv-desktop-one@2x.png 2x" alt="Айфон с серым экраном">
@@ -188,7 +194,9 @@
         </li>
         <li class="advantages__item advantages__item--changes">
           <h3 class="advantages__title">Меняет мир вокруг</h3>
-          <p class="advantages__description">Сделайте снимок и<br class="br-desktop"> украсьте его смайликом<br class="br-desktop"> или текстовой подписью,<br class="br-desktop"> чтобы<br class="br-tablet"> усилить эффект</p>
+          <p class="advantages__description">Сделайте снимок и<br> украсьте его смайликом<br>
+            или текстовой подписью,<br> чтобы<br>
+            усилить эффект</p>
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/adv-desktop-two.webp 1x, img/adv-desktop-two@2x.webp 2x">
             <img src="img/adv-desktop-two.png" srcset="img/adv-desktop-two@2x.png 2x" alt="Айфон с красным экраном">
@@ -196,7 +204,7 @@
         </li>
         <li class="advantages__item advantages__item--makes">
           <h3 class="advantages__title">Заводит<br> новых друзей</h3>
-          <p class="advantages__description">Ставьте лайки,<br class="br-desktop"> комментируйте, делитесь<br class="br-tablet"> фотографиями с друзьями<br class="br-desktop"> и заводите новых</p>
+          <p class="advantages__description">Ставьте лайки,<br> комментируйте, делитесь<br> фотографиями с друзьями<br> и заводите новых</p>
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/adv-desktop-three.webp 1x, img/adv-desktop-three@2x.webp 2x">
             <source media="(min-width: 660px)" srcset="img/adv-tablet-three.webp 1x, img/adv-tablet-three@2x.webp 2x">
@@ -212,11 +220,8 @@
   <section class="diagram">
     <div class="diagram__wrapper">
       <div class="diagram__container">
-        <h3 class="diagram__title">Эффект<br>
-          на 24 часа!</h3>
-        <p class="diagram__description">Британские ученые провели исследования<br class="br-diagram-tablet">
-          и доказали,<br class="br-diagram-desk"> что положительный эффект<br class="br-diagram-tablet">
-          от использования приложения<br class="br-diagram-desk"> длится целые сутки!</p>
+        <h3 class="diagram__title">Эффект<br> на 24 часа!</h3>
+        <p class="diagram__description">Британские ученые провели исследования<br> и доказали,<br> что положительный эффект<br> от использования приложения<br> длится целые сутки!</p>
         <a class="diagram__link" href="#" aria-label="Узнать больше об исследовании">Узнать больше об исследовании</a>
       </div>
     </div>
@@ -229,7 +234,7 @@
           <div class="reviews__author-info">
             <cite class="reviews__author-name">Николай Петров</cite>
             <p class="reviews__author-details">25 лет, водитель трамвая</p>
-            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на<br> привычные серые вещи! А еще я познакомился со своей будущей женой в<br> комментариях к выложенной фотографии!»</p>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на<br> привычные серые вещи! А еще я<br> познакомился со своей будущей женой в<br> комментариях к выложенной фотографии!»</p>
           </div>
         </blockquote>
       </div>
@@ -239,8 +244,16 @@
         <button class="slider-button" type="button" aria-label="Вперед"></button>
       </div>
       <div class="reviews__arrows">
-        <button class="reviews__arrow reviews__arrow--left" aria-label="Назад"></button>
-        <button class="reviews__arrow reviews__arrow--right" aria-label="Вперед"></button>
+        <button class="reviews__arrow reviews__arrow--left" aria-label="Назад">
+          <svg class="left-arrow" width="22" height="41">
+            <use xlink:href="#left-arrow"></use>
+          </svg>
+        </button>
+        <button class="reviews__arrow reviews__arrow--right" aria-label="Вперед">
+          <svg class="right-arrow" width="22" height="41">
+            <use xlink:href="#right-arrow"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </section>
@@ -321,7 +334,7 @@
 </main>
 <footer class="page-footer">
   <a class="page-footer__logo">
-    <svg width="147" height="40"  role="img" aria-label="Логотип Пинк">
+    <svg width="147" height="40" role="img" aria-label="Логотип Пинк">
       <use xlink:href="#page-footer-logo"></use>
     </svg>
   </a>

@@ -18,7 +18,6 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
-    //align-items: flex-end;
     background-image: url("../img/diagram-tablet.svg");
     background-repeat: no-repeat;
     background-size: 238px 276px;
@@ -27,7 +26,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    //min-height: 430px;
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
@@ -73,7 +71,7 @@
   padding: 0 0 10px 0;
 
   @media (min-width: @tablet-width) {
-    .br-diagram-desk {
+    br:nth-child(even) {
       display: none;
     }
 
@@ -81,11 +79,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    .br-diagram-tablet {
+    br:nth-child(odd) {
       display: none;
     }
 
-    .br-diagram-desk {
+    br:nth-child(even) {
       display: block;
     }
 

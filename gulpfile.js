@@ -18,9 +18,12 @@ const sync = require("browser-sync").create();
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({ collapseWhitespace: true,
+      ignoreCustomFragments: [ /<br>\s/gi ] }))
     .pipe(gulp.dest("build"))
+    .pipe(sync.stream());
 }
+
 
 // Styles
 
@@ -154,7 +157,7 @@ exports.build = build;
 
 //Default
 
-exports.default =gulp.series(
+exports.default = gulp.series(
   clean,
   gulp.parallel(
     html,
