@@ -5,7 +5,8 @@
   <title>HTML Academy: Пинк</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googles.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
 </head>
 <body class="page__body">
 <svg display="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +102,7 @@
   <div class="page-header__container">
     <div class="page-header__wrapper page-header--closed page-header--nojs">
       <a class="page-header__logo" href="index.html">
-        <svg class="page-header__logo-desktop" width="147" height="40">
+        <svg class="page-header__logo-desktop" width="147" height="40" role="img" aria-label="Логотип Пинк">
           <use xlink:href="#header-logo"></use>
         </svg>
       </a>
@@ -133,22 +134,21 @@
   <section class="form-contest">
     <form class="form" method="post" action="https://echo.htmlacademy.ru">
       <h2 class="form__title">Конкурс на самое<br> безбашенное<br class="br-desktop-form"> путешествие с Пинк</h2>
-      <p class="form__description">Поделитесь своей историей и получите шанс выиграть<br>
-        ценный приз — 1000 миль на<br class="form-desktop-br"> вашу бонусную карту!<br>
+      <p class="form__description">Поделитесь своей историей и получите шанс выиграть<br> ценный приз — 1000 миль на<br class="form-desktop-br"> вашу бонусную карту!<br>
         <span class="form__insert">Пожалуйста, заполните форму ниже:</span></p>
       <fieldset class="form__fields field-user">
         <ul class="field-user__list">
           <li class="field-user__item">
             <label class="field-user__label" for="user-surname">Фамилия:</label>
-            <input class="field-user__text" id="user-surname" type="text" name="user-surname" placeholder="Укажите фамилию *">
+            <input class="field-user__text" id="user-surname" type="text" name="user-surname" placeholder="Укажите фамилию *" aria-label="Укажите фамилию">
           </li>
           <li class="field-user__item">
             <label class="field-user__label" for="name">Имя:</label>
-            <input class="field-user__text" id="name" type="text" name="user-name" placeholder="Введите ваше имя *">
+            <input class="field-user__text" id="name" type="text" name="user-name" placeholder="Введите ваше имя *" aria-label="Введите ваше имя">
           </li>
           <li class="field-user__item">
             <label class="field-user__label " for="user-patronymic">Отчество:</label>
-            <input class="field-user__text" id="user-patronymic" type="text" name="user-patronymic" placeholder="Ну и отчество тоже">
+            <input class="field-user__text" id="user-patronymic" type="text" name="user-patronymic" placeholder="Ну и отчество тоже" aria-label="Введите ваше отчество">
           </li>
         </ul>
       </fieldset>
@@ -157,27 +157,27 @@
           <legend class="field-checkbox__title">Ваши безбашенные<br> достижения в путешествии</legend>
           <ul class="field-checkbox__list">
             <li class="field-checkbox__item">
-              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="took-selfie" id="selfie" checked>
+              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="took-selfie" id="selfie" checked aria-label="Сделал селфи">
               <label class="field-checkbox__label" for="selfie">Сделал селфи с акулой</label>
             </li>
             <li class="field-checkbox__item">
-              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="burned-beach" id="sunburn" checked>
+              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="burned-beach" id="sunburn" checked aria-label="Обгорел на пляже">
               <label class="field-checkbox__label" for="sunburn">Обгорел на пляже</label>
             </li>
             <li class="field-checkbox__item">
-              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="saw-chuck-norris" id="see-chuck">
+              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="saw-chuck-norris" id="see-chuck" aria-label="Видел Чака Норриса">
               <label class="field-checkbox__label" for="see-chuck">Видел Чака Норриса</label>
             </li>
             <li class="field-checkbox__item">
-              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="bought-souvenirs" id="souvenirs">
+              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="bought-souvenirs" id="souvenirs" aria-label="Накупил сувениров">
               <label class="field-checkbox__label" for="souvenirs">Накупил сувениров</label>
             </li>
             <li class="field-checkbox__item">
-              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="held-tower" id="tower" checked>
-              <label class="field-checkbox__label" for="tower"> Удержал башню</label>
+              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="held-tower" id="tower" checked aria-label="Удержал башню">
+              <label class="field-checkbox__label" for="tower">Удержал башню</label>
             </li>
             <li class="field-checkbox__item">
-              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="trashed-hotel" id="hotel">
+              <input class="visually-hidden field-checkbox__input" type="checkbox" name="user-actions" value="trashed-hotel" id="hotel" aria-label="Разгромил отель">
               <label class="field-checkbox__label" for="hotel">Разгромил отель</label>
             </li>
           </ul>
@@ -188,12 +188,12 @@
         <ul class="field-contacts__list">
           <li class="field-contacts__item field-contacts__item--phone">
             <label class="field-contacts__label" for="phone">Номер телефона</label>
-            <input class="field-contacts__text" id="phone" type="tel" name="user-phone" placeholder="Номер, пожалуйста">
+            <input class="field-contacts__text" id="phone" type="tel" name="user-phone" placeholder="Номер, пожалуйста" aria-label="Введите номер телефона">
           </li>
 
           <li class="field-contacts__item field-contacts__item--email">
             <label class="field-contacts__label" for="email">Адрес почты</label>
-            <input class="field-contacts__text" id="email" type="email" name="user-email" placeholder="Введите почту *" required>
+            <input class="field-contacts__text" id="email" type="email" name="user-email" placeholder="Введите почту *" required aria-label="Введите электронную почту">
           </li>
         </ul>
       </fieldset>
@@ -202,15 +202,15 @@
           <legend class="field-radio__title">С каким приложением<br> путешествовали?</legend>
           <ul class="field-radio__list">
             <li class="field-radio__item">
-              <input class="visually-hidden field-radio__input" name="system-type" type="radio" value="ios" id="ios" checked>
+              <input class="visually-hidden field-radio__input" name="system-type" type="radio" value="ios" id="ios" checked aria-label="Система айос">
               <label class="field-radio__label" for="ios">Pink для iOS</label>
             </li>
             <li class="field-radio__item">
-              <input class="visually-hidden field-radio__input" name="system-type" type="radio" value="android" id="android">
+              <input class="visually-hidden field-radio__input" name="system-type" type="radio" value="android" id="android" aria-label="Система андроид">
               <label class="field-radio__label" for="android">Pink на Android</label>
             </li>
             <li class="field-radio__item">
-              <input class="visually-hidden field-radio__input" name="system-type" type="radio" value="windows phone" id="win-phone">
+              <input class="visually-hidden field-radio__input" name="system-type" type="radio" value="windows phone" id="win-phone" aria-label="Система виндоус фон">
               <label class="field-radio__label" for="win-phone">Windows Phone</label>
             </li>
           </ul>
@@ -220,12 +220,12 @@
         <legend class="field-message__title">Опишите свои эмоции</legend>
         <div class="field-message__wrapper">
           <label>
-            <textarea class="field-message__text" name="text-message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="field-message__text" name="text-message" placeholder="Можно прям в красках, не стесняясь в выражениях" aria-label="Опишите свои эмоции"></textarea>
           </label>
         </div>
       </fieldset>
       <div class="form__wrapper-button">
-        <button class="form__button button-form" type="submit">Отправить форму</button>
+        <button class="form__button button-form" type="submit" aria-label="Отправить форму">Отправить форму</button>
         <p class="form__text-required"><small class="form__text-star">*</small> — Обязательные <span class="form__text-insert">для заполнения</span> поля
         </p>
       </div>
@@ -234,21 +234,21 @@
 </main>
 <footer class="page-footer page-footer__form">
   <a class="page-footer__logo">
-    <svg width="147" height="40">
+    <svg width="147" height="40"  role="img" aria-label="Логотип Пинк">
       <use xlink:href="#page-footer-logo"></use>
     </svg>
   </a>
   <ul class="page-footer__social social-list">
     <li class="social-list__item">
       <a class="social-list__link" href="#"><span class="visually-hidden">Твиттер</span>
-        <svg class="social-list__icon" width="18" height="14">
+        <svg class="social-list__icon" width="18" height="14" role="img" aria-label="Твиттер">
           <use xlink:href="#icon-twitter"></use>
         </svg>
       </a>
     </li>
     <li class="social-list__item">
       <a class="social-list__link" href="#"><span class="visually-hidden">Фейсбук</span>
-        <svg class="social-list__icon" width="9" height="18">
+        <svg class="social-list__icon" width="9" height="18" role="img" aria-label="Фейсбук">
           <use xlink:href="#icon-facebook"></use>
         </svg>
       </a>
@@ -256,7 +256,7 @@
     <li class="social-list__item">
       <a class="social-list__link social-list__link-youtube" href="#">
         <span class="visually-hidden">Ютуб</span>
-        <svg class="social-list__icon" width="15" height="13">
+        <svg class="social-list__icon" width="15" height="13" role="img" aria-label="Ютуб">
           <use xlink:href="#icon-youtube"></use>
         </svg>
       </a>
@@ -265,7 +265,7 @@
   <div class="copyright">
     <b class="copyright__text">Разработано</b>
     <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">Логотип академии</span>
-      <svg class="copyright__icon" width="27" height="34">
+      <svg class="copyright__icon" width="27" height="34" role="img" aria-label="Логотип HTML Academy">
         <use xlink:href="#copyright-icon"></use>
       </svg>
     </a>
@@ -278,7 +278,6 @@
     <button class="modal__button button-form" type="button" aria-label="Закрыть">Ок</button>
   </div>
 </section>
-
 <section class="modal modal__submit">
   <h3 class="modal__title">Ваша заявка<br class="modal-tablet-br"> отправлена</h3>
   <p class="modal__text">Спасибо за ваше участие, ваша<br class="modal-tablet-br"> заявка<br class="modal-mobile-br"> уже<br class="modal-desktop-br"> поступила к нам. В<br class="modal-tablet-br"> ближайшее<br class="modal-mobile-br"> время мы<br class="modal-desktop-br"> рассмотрим<br class="modal-tablet-br"> ее и<br
@@ -287,6 +286,6 @@
     <button class="modal__button modal__button--wide button-form" type="button" aria-label="Закрыть">Закрыть окно</button>
   </div>
 </section>
-<script src="js/script.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

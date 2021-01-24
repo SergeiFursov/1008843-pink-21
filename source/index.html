@@ -4,12 +4,15 @@
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://fonts.googles.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload" href="/fonts/opensans.woff2" as="font">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<!--  <link href="https://fonts.googles.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">-->
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
 </head>
 <body class="page__body">
-<svg display="none" xmlns="http://www.w3.org/2000/svg">
+<svg display="none">
   <symbol class="header-logo" id="header-logo" viewBox="0 0 147 40">
     <path class="header-logo__tablet-glasses" d="M53.9 6.59l5.03 21.14a1.42 1.42 0 01-.75 1.72c-.2.09-.43.13-.65.11h-4.01a11.63 11.63 0 01-11.49 10.32c-5.92 0-10.8-4.5-11.49-10.32h-1.96A11.75 11.75 0 0116.97 40c-6
         0-10.94-4.57-11.61-10.47H1.45A1.36 1.36 0 01.3 29a1.42 1.42 0 01-.24-1.27L5.1 6.6C5.46 4.26 7.64 0 13.5 0c.38 0 .76.16 1.03.44a1.5 1.5 0 010 2.1c-.27.27-.65.43-1.03.43-4.71
@@ -103,7 +106,7 @@
   <div class="page-header__container">
     <div class="page-header__wrapper page-header--closed page-header--nojs">
       <a class="page-header__logo" href="#">
-        <svg class="page-header__logo-desktop" width="147" height="40">
+        <svg class="page-header__logo-desktop" width="147" height="40" viewBox="0 0 147 40" role="img" aria-label="Логотип Пинк">
           <use xlink:href="#header-logo"></use>
         </svg>
       </a>
@@ -113,16 +116,24 @@
         </button>
         <ul class="main-navigation__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">Главная</a>
+            <a class="site-list__link">
+              Главная
+            </a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">Фотографии</a>
+            <a class="site-list__link" href="photo.html">
+              Фотографии
+            </a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Конкурс</a>
+            <a class="site-list__link" href="form.html">
+              Конкурс
+            </a>
           </li>
           <li class="site-list__item last">
-            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">
+              HTML Academy
+            </a>
           </li>
         </ul>
       </nav>
@@ -130,38 +141,34 @@
   </div>
 </header>
 <main class="page-main">
-  <!--  <h1 class="visually-hidden">Пинк-шаг в новый мир.</h1>-->
-
   <section class="application">
     <div class="application__container">
-      <!--      <h2 class="visually-hidden">Реклама приложения Пинк</h2>-->
-      <h1 class="application__slogan">Взгляните<br class="app-tablet-br"> на жизнь<br> иначе!</h1>
+      <h1 class="application__slogan">Взгляните на жизнь<br> иначе!</h1>
       <div class="application__features">
         <div class="application__wrapper">
-          <a class="application__button" href="#">Скачать приложение</a>
+          <a class="application__button" href="#" aria-label="Скачать приложение Пинк">Скачать приложение</a>
           <ul class="application__list">
             <li class="application__item">
-              <a class="application__icon-apple" href="https://www.apple.com/ru/app-store">
+              <a class="application__icon-apple" href="https://www.apple.com/ru/app-store" aria-label="Сайт компании Эпл">
                 <img src="img/apple-logo.svg" width="47" height="56" alt="Логотип Эпл">
               </a>
             </li>
             <li class="application__item-android">
-              <a class="application__icon" href="https://play.google.com/store/apps">
+              <a class="application__icon" href="https://play.google.com/store/apps" aria-label="Сайт компании Андроид">
                 <img src="img/android-logo.svg" width="43" height="47" alt="Логотип Андроид">
               </a>
-            </li><!---->
+            </li>
             <li class="application__item-ms">
-              <a class="application__icon" href="https://www.microsoft.com/en-us/store/apps/windows-phone">
+              <a class="application__icon" href="https://www.microsoft.com/en-us/store/apps/windows-phone" aria-label="Сайт компании Майкрософт">
                 <img src="img/microsoft-logo.svg" width="44" height="41" alt="Логотип Майкрософт">
               </a>
             </li>
           </ul>
-          <p class="application__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          <p class="application__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </div>
     </div>
   </section>
-
   <section class="advantages">
     <div class="advantages__header">
       <h2 class="visually-hidden">Преимущества приложения Пинк</h2>
@@ -169,15 +176,11 @@
       <p class="advantages__text">Нам есть, что вам<br>
         предложить!</p>
     </div>
-    <!--    <div class="advantages__container">-->
     <div class="advantages__wrapper">
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--cheers-up">
           <h3 class="advantages__title">Поднимает настроение</h3>
-          <p class="advantages__description">Приложение позволит вам<br class="br-desktop">
-            победить<br class="br-mobile"> осеннюю хандру<br class="br-desktop"> и депрессию<br class="br-mobile">
-            буквально в<br class="br-tablet">
-            несколько кликов!</p>
+          <p class="advantages__description">Приложение позволит вам<br class="br-desktop"> победить<br class="br-mobile"> осеннюю хандру<br class="br-desktop"> и депрессию<br class="br-mobile"> буквально в<br class="br-tablet"> несколько кликов!</p>
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/adv-desktop-one.webp 1x, img/adv-desktop-one@2x.webp 2x">
             <img src="img/adv-desktop-one.png" srcset="img/adv-desktop-one@2x.png 2x" alt="Айфон с серым экраном">
@@ -185,11 +188,7 @@
         </li>
         <li class="advantages__item advantages__item--changes">
           <h3 class="advantages__title">Меняет мир вокруг</h3>
-          <p class="advantages__description">Сделайте снимок и<br class="br-desktop">
-            украсьте его смайликом<br class="br-desktop">
-            или текстовой подписью,<br class="br-desktop">
-            чтобы<br class="br-tablet">
-            усилить эффект</p>
+          <p class="advantages__description">Сделайте снимок и<br class="br-desktop"> украсьте его смайликом<br class="br-desktop"> или текстовой подписью,<br class="br-desktop"> чтобы<br class="br-tablet"> усилить эффект</p>
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/adv-desktop-two.webp 1x, img/adv-desktop-two@2x.webp 2x">
             <img src="img/adv-desktop-two.png" srcset="img/adv-desktop-two@2x.png 2x" alt="Айфон с красным экраном">
@@ -197,25 +196,19 @@
         </li>
         <li class="advantages__item advantages__item--makes">
           <h3 class="advantages__title">Заводит<br> новых друзей</h3>
-          <p class="advantages__description">Ставьте лайки,<br class="br-desktop">
-            комментируйте, делитесь<br class="br-tablet">
-            фотографиями с друзьями<br class="br-desktop">
-            и заводите
-            новых</p>
+          <p class="advantages__description">Ставьте лайки,<br class="br-desktop"> комментируйте, делитесь<br class="br-tablet"> фотографиями с друзьями<br class="br-desktop"> и заводите новых</p>
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/adv-desktop-three.webp 1x, img/adv-desktop-three@2x.webp 2x">
             <source media="(min-width: 660px)" srcset="img/adv-tablet-three.webp 1x, img/adv-tablet-three@2x.webp 2x">
             <source type="image/webp" srcset="img/adv-mobile-three.webp 1x, img/adv-mobile-three@2x.webp 2x">
             <source media="(min-width: 960px)" srcset="img/adv-desktop-three.png 1x, img/adv-desktop-three@2x.png 2x">
             <source media="(min-width: 660px)" srcset="img/adv-tablet-three.png 1x, img/adv-tablet-three@2x.png 2x">
-            <img src="img/adv-mobile-three.png" srcset="img/adv-mobile-three@2x.png 2x" alt="Айфон с красным экраном">
+            <img src="img/adv-mobile-three.png" srcset="img/adv-mobile-three@2x.png 2x" alt="Айфон с красным экраном и смайликом">
           </picture>
         </li>
       </ul>
     </div>
-    <!--    </div>-->
   </section>
-
   <section class="diagram">
     <div class="diagram__wrapper">
       <div class="diagram__container">
@@ -224,11 +217,10 @@
         <p class="diagram__description">Британские ученые провели исследования<br class="br-diagram-tablet">
           и доказали,<br class="br-diagram-desk"> что положительный эффект<br class="br-diagram-tablet">
           от использования приложения<br class="br-diagram-desk"> длится целые сутки!</p>
-        <a class="diagram__link" href="#">Узнать больше об исследовании</a>
+        <a class="diagram__link" href="#" aria-label="Узнать больше об исследовании">Узнать больше об исследовании</a>
       </div>
     </div>
   </section>
-
   <section class="reviews">
     <div class="reviews__wrapper">
       <h2 class="visually-hidden">Отзывы о нас</h2>
@@ -237,15 +229,14 @@
           <div class="reviews__author-info">
             <cite class="reviews__author-name">Николай Петров</cite>
             <p class="reviews__author-details">25 лет, водитель трамвая</p>
-            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на<br>
-              привычные серые вещи! А еще я познакомился со своей будущей женой в<br> комментариях к выложенной фотографии!»</p>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на<br> привычные серые вещи! А еще я познакомился со своей будущей женой в<br> комментариях к выложенной фотографии!»</p>
           </div>
         </blockquote>
       </div>
       <div class="reviews__toggle slider-buttons">
-        <button class="slider-button slider-button--current" type="button"></button>
-        <button class="slider-button" type="button"></button>
-        <button class="slider-button" type="button"></button>
+        <button class="slider-button slider-button--current" type="button" aria-label="Назад"></button>
+        <button class="slider-button" type="button" aria-label="Центр"></button>
+        <button class="slider-button" type="button" aria-label="Вперед"></button>
       </div>
       <div class="reviews__arrows">
         <button class="reviews__arrow reviews__arrow--left" aria-label="Назад"></button>
@@ -253,7 +244,6 @@
       </div>
     </div>
   </section>
-
   <section class="tariffs">
     <div class="tariffs__wrapper slider-tariffs">
       <h2 class="visually-hidden">Комплектации и стоимость</h2>
@@ -290,13 +280,12 @@
         </tr>
       </table>
       <p class="tariffs__toggles slider-buttons">
-        <button class="slider-button tariffs__slider-button" type="button"></button>
-        <button class="slider-button tariffs__slider-button tariffs__slider-button--current" type="button"></button>
-        <button class="slider-button tariffs__slider-button" type="button"></button>
+        <button class="slider-button tariffs__slider-button" type="button" aria-label="Назад"></button>
+        <button class="slider-button tariffs__slider-button tariffs__slider-button--current" type="button" aria-label="Центр"></button>
+        <button class="slider-button tariffs__slider-button" type="button" aria-label="Вперед"></button>
       </p>
     </div>
   </section>
-
   <section class="contacts">
     <div class="contacts__wrapper">
       <h2 class="visually-hidden">Контактная информация</h2>
@@ -305,25 +294,26 @@
         <li class="contacts__item contacts__item--phone">
           <h3 class="contacts__title">Звоните:</h3>
           <p>
-            <a class="contacts__text" href="tel:+7(812)5556666">+7 (812) 555-66-66</a>
+            <a class="contacts__text" href="tel:+7(812)5556666" aria-label="Телефон компании HTML Academy">+7 (812) 555-66-66</a>
           </p>
         </li>
         <li class="contacts__item contacts__item--email">
           <h3 class="contacts__title">Пишите:</h3>
           <p>
-            <a class="contacts__text" href="#">mail@htmlacademy.ru</a>
+            <a class="contacts__text" href="#" aria-label="Адрес электронной почты">mail@htmlacademy.ru</a>
           </p>
         </li>
         <li class="contacts__item contacts__item--address">
           <h3 class="contacts__title">Приезжайте в гости:</h3>
           <p>
-            <a class="contacts__text" href="#">ул. Большая<br>Конюшенная, 19/8</a>
+            <a class="contacts__text" href="#" aria-label="Адрес компании HTML Academy">ул. Большая<br>Конюшенная, 19/8</a>
           </p>
         </li>
       </ul>
     </div>
     <div class="contacts__map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6143142117494!2d30.32128786903261!3d59.93854181494334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1606566375871!5m2!1sru!2sru"
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6143142117494!2d30.32128786903261!3d59.93854181494334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1606566375871!5m2!1sru!2sru"
         width="1200" height="502" allowfullscreen="" aria-hidden="false" tabindex="0">
       </iframe>
     </div>
@@ -331,23 +321,21 @@
 </main>
 <footer class="page-footer">
   <a class="page-footer__logo">
-    <!--    <span class="page-footer__logo-mobile">-->
-    <svg width="147" height="40">
+    <svg width="147" height="40"  role="img" aria-label="Логотип Пинк">
       <use xlink:href="#page-footer-logo"></use>
     </svg>
-    <!--    </span>-->
   </a>
   <ul class="page-footer__social social-list">
     <li class="social-list__item">
       <a class="social-list__link" href="#"><span class="visually-hidden">Твиттер</span>
-        <svg class="social-list__icon" width="18" height="14">
+        <svg class="social-list__icon" width="18" height="14" role="img" aria-label="Твиттер">
           <use xlink:href="#icon-twitter"></use>
         </svg>
       </a>
     </li>
     <li class="social-list__item">
       <a class="social-list__link" href="#"><span class="visually-hidden">Фейсбук</span>
-        <svg class="social-list__icon" width="9" height="18">
+        <svg class="social-list__icon" width="9" height="18" role="img" aria-label="Фейсбук">
           <use xlink:href="#icon-facebook"></use>
         </svg>
       </a>
@@ -355,7 +343,7 @@
     <li class="social-list__item">
       <a class="social-list__link social-list__link-youtube" href="#">
         <span class="visually-hidden">Ютуб</span>
-        <svg class="social-list__icon" width="15" height="13">
+        <svg class="social-list__icon" width="15" height="13" role="img" aria-label="Ютуб">
           <use xlink:href="#icon-youtube"></use>
         </svg>
       </a>
@@ -364,12 +352,12 @@
   <div class="copyright">
     <b class="copyright__text">Разработано</b>
     <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">Логотип академии</span>
-      <svg class="copyright__icon" width="27" height="34">
+      <svg class="copyright__icon" width="27" height="34" role="img" aria-label="Логотип HTML Academy">
         <use xlink:href="#copyright-icon"></use>
       </svg>
     </a>
   </div>
 </footer>
-<script src="js/script.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

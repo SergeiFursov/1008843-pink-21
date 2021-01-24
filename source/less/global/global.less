@@ -1,3 +1,27 @@
+//Global
+
+body {
+  width: auto;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: @fw-medium;
+  font-size: @fs-small;
+  line-height: @lh-medium;
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-height: 100vh;
+  margin: 0;
+  color: @basic-navy-blue;
+  background-color: @basic-white;
+}
+
 .page__body a {
   text-decoration: none;
 }
