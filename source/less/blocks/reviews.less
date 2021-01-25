@@ -4,7 +4,7 @@
   position: relative;
   min-height: 320px;
   margin: 0;
-  padding: 44px 0 0 0;
+  padding: 0;
   overflow: hidden;
   text-align: center;
 
@@ -36,12 +36,17 @@
 
 .reviews__list {
   position: relative;
-  margin: 0;
+  margin: -2px 0 0 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .reviews__item {
-  margin: -5px 0 0 0;
+  margin: 0;
   padding: 0;
 
   @media (min-width: @tablet-width) {
@@ -81,9 +86,9 @@
 .reviews__text {
   line-height: @lh-large;
   text-align: center;
-  padding-bottom: 15px;
+  padding: 0 0 15px 0;
 
-  br {
+  br:nth-child(3) {
     display: none;
   }
 
@@ -92,10 +97,22 @@
     margin: 0;
     padding: 0 0 36px 0;
     font-size: @fs-medium;
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
     br {
+      display: block;
+    }
+
+    br:nth-child(2) {
+      display: none;
+    }
+
+    br:nth-child(3) {
       display: block;
     }
 
@@ -131,8 +148,9 @@
   }
 
   .reviews__arrow {
+    display: block;
     position: absolute;
-    bottom: 154px;
+    bottom: 155px;
     width: 22px;
     height: 41px;
     border: none;
@@ -140,15 +158,26 @@
     cursor: pointer;
     background-color: transparent;
   }
+}
 
-  .reviews__arrow--left {
-    left: 0;
-    background-image: url("../img/left-arrow.svg");
+.reviews__arrow--left {
+  left: -6px;
+}
+
+.reviews__arrow--right {
+  right: 6px;
+}
+
+.left-arrow,
+.right-arrow {
+  fill: fade(@basic-navy-blue, 30%);
+
+  &:hover {
+    fill: fade(@basic-navy-blue, 60%);
   }
 
-  .reviews__arrow--right {
-    right: 0;
-    background-image: url("../img/right-arrow.svg");
+  &:active {
+    fill: fade(@basic-navy-blue, 10%);
   }
 }
 

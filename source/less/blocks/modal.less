@@ -37,49 +37,50 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding: 52px 0 52px 0;
+    padding: 50px 0 53px 0;
     .bg-grey();
   }
 }
 
 .modal__wrapper--submit {
-  padding: 45px 0 45px 0;
+  margin: 0;
+  padding: 50px 0 50px 0;
   .bg-grey();
 
-  @media (min-width: @desktop-width) {
-    margin: 0;
-    padding: 52px 0 52px 0;
-  }
+  //@media (min-width: @desktop-width) {
+  //  margin: 0;
+  //  padding: 50px 0 50px 0;
+  //}
 }
 
 .modal__error {
-  top: 1167px;
+  top: 1166px;
 
   @media (min-width: @tablet-width) {
-    top: 1167px;
+    top: 911px;
     left: 0;
     right: 0;
   }
 
   @media (min-width: @desktop-width) {
     //min-height: 377px;
-    top: 824px;
+    top: 819px;
     left: 0;
     right: 0;
   }
 }
 
 .modal__submit {
-  top: 1628px;
+  top: 1640px;
 
   @media (min-width: @tablet-width) {
-    top: 1641px;
+    top: 1387px;
     left: 0;
     right: 0;
   }
 
   @media (min-width: @desktop-width) {
-    top: 1284px;
+    top: 1278px;
     left: 0;
     right: 0;
   }
@@ -112,7 +113,32 @@
 .modal__error .modal__text {
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding: 0 0 61px 0;
+    padding: 0 0 63px 0;
+  }
+}
+
+.modal__submit .modal__title {
+  padding: 0 0 24px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px 20px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 80px 22px 80px;
+  }
+}
+
+.modal__submit .modal__text {
+  margin: 0;
+  padding: 0 20px 35px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px 30px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 140px 39px 140px;
   }
 }
 
@@ -132,29 +158,39 @@
   }
 }
 
-.modal-mobile-br {
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
 
-.modal-tablet-br {
+.modal__error br {
   display: none;
 
   @media (min-width: @tablet-width) {
     display: block;
+
+    &:nth-child(2) {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
     display: none;
   }
+
+  &:nth-child(2) {
+    display: block;
+  }
 }
 
-.modal-desktop-br {
+.modal__submit br {
   display: none;
 
+  //@media (min-width: @tablet-width) {
+  //  display: none;
+  //}
 
   @media (min-width: @desktop-width) {
     display: block;
+  }
+
+  &:nth-child(3) {
+    display: none;
   }
 }

@@ -12,7 +12,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 45px 0 0 0;
+    padding: 46px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,7 +23,7 @@
 
 .advantages__text {
   margin: 0 auto;
-  padding: 0 0 29px 0;
+  padding: 0 40px 29px 40px;
   font-weight: @fw-small;
   font-size: @fs-large;
   line-height: 29px;
@@ -51,21 +51,20 @@
   //padding: 84px 20px 0 20px;
   margin: 0;
   padding: 0;
-  height: 790px;
+  //min-height: 750px;
   //clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
   //.bg-grey();
   background-image: url("../img/adv-mobile.png");
   background-position: 0 -40px;
-  background-size: cover;
-  overflow: hidden; // Скрывает телефон снизу
-  //background-color: greenyellow;
+  background-size: 100% 828px;
+  background-repeat: no-repeat;
+  //overflow: hidden; // Скрывает телефон снизу
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     position: relative;
     justify-content: flex-end;
-    height: 489px;
-    //margin: 0 auto;
+    min-height: 489px;
     padding: 28px 0 0 0;
     z-index: 1;
     background: url("../img/adv-tablet.png");
@@ -75,7 +74,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    height: 590px;
+    min-height: 590px;
     justify-content: flex-start;
     //width: 940px;
     margin: 0;
@@ -91,19 +90,18 @@
   margin: 0;
   padding: 84px 20px 0 20px;
   list-style: none;
-
+  //min-height: 750px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
     padding: 77px 20px 0 20px;
-    height: 410px;
+    min-height: 410px;
     text-align: left;
-    //min-height: 390px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
-    height: 616px;
+    min-height: 616px;
     //align-items: flex-end;
     flex-direction: row;
     .wrapper-desktop();
@@ -180,6 +178,8 @@
 }
 
 .advantages__description {
+  padding: -1px 0 1px 0;
+
   @media (min-width: @desktop-width) {
     font-size: @fs-medium;
     line-height: @lh-large;
@@ -189,7 +189,6 @@
 }
 
 .advantages__item--makes .advantages__description {
-  //height: 340px;
   padding: 0 0 27px 0;
 
   @media (min-width: @tablet-width) {
@@ -202,12 +201,22 @@
 }
 
 .advantages__item--makes {
+  padding: 0;
+
+  br {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
     background: none;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
+
+    br {
+      display: block;
+    }
   }
 }
 
@@ -227,21 +236,16 @@
   display: block;
   margin: 0 auto;
   padding: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 87%);
 
   @media (min-width: @tablet-width) {
     position: absolute;
     left: 20px;
     top: 36px;
-    //z-index: 3;
-    //width: 268px;
-    //height: 547px;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 88%);
   }
 
   @media (min-width: @desktop-width) {
-    //position: static;
-    //width: 186px;
-    //height: 382px;
-    //margin: 0 auto;
     top: 0;
     left: 0;
     right: 0;
@@ -250,28 +254,28 @@
   }
 }
 
-.br-mobile {
-  @media (min-width: @tablet-width) {
-    display: none;
+.advantages__item--cheers-up br {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
-.br-tablet {
+.advantages__item--changes br {
   display: none;
 
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.advantages__item--changes br:nth-child(4) {
   @media (min-width: @tablet-width) {
     display: block;
   }
 
   @media (min-width: @desktop-width) {
     display: none;
-  }
-}
-
-.br-desktop {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
   }
 }
