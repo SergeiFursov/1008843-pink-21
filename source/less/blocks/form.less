@@ -78,7 +78,12 @@
   line-height: 33px;
   text-align: center;
   color: @basic-white;
-  //background-color: @basic-navy-blue;
+
+  @media (min-width: 400px) {
+    top: -292px;
+    left: 0;
+    right: 0;
+  }
 
   @media (min-width: @tablet-width) {
     top: -305px;
@@ -113,6 +118,10 @@
     display: none;
   }
 
+  .form-desktop-br {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 91px 20px 70px 20px;
     font-size: @fs-medium;
@@ -120,10 +129,6 @@
 
     br {
       display: block;
-    }
-
-    .form-desktop-br {
-      display: none;
     }
   }
 

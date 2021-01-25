@@ -18,12 +18,11 @@ const sync = require("browser-sync").create();
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true,
-      ignoreCustomFragments: [ /<br>\s/gi ] }))
-    .pipe(gulp.dest("build"))
-    .pipe(sync.stream());
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      ignoreCustomFragments: [ /<br>/ ]}))
+    .pipe(gulp.dest("build"));
 }
-
 
 // Styles
 
@@ -65,7 +64,7 @@ const images = () => {
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.images = images;

@@ -53,6 +53,12 @@
   text-align: center;
   color: @basic-white;
 
+  @media (min-width: 400px) {
+    top: -283px;
+    left: 0;
+    right: 0;
+  }
+
   @media (min-width: @tablet-width) {
     top: -305px;
     //margin: 100px auto 0 auto;
@@ -74,10 +80,6 @@
   margin: 0 auto;
   padding: 44px 20px 50px 20px;
 
-  .br-photo-tablet {
-    display: none;
-  }
-
   @media (min-width: @tablet-width) {
     padding: 92px 20px 76px 20px;
     font-size: @fs-medium;
@@ -86,20 +88,17 @@
       display: none;
     }
 
-    .br-photo-tablet {
+    br:nth-child(2),
+    br:nth-child(3) {
       display: block;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 92px 160px 89px 160px;
+    padding: 91px 160px 88px 160px;
 
-    .br-photo-tablet {
+    br:nth-child(2) {
       display: none;
-    }
-
-    .br-photo-desktop {
-      display: block;
     }
   }
 }
@@ -115,7 +114,7 @@
     content: "Панорама дня";
     position: absolute;
     top: 0;
-    right: 20px;
+    right: 21px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -132,7 +131,7 @@
 
   @media (min-width: @tablet-width) {
     &::before {
-      top: 58px;
+      top: 57px;
     }
   }
 
@@ -157,7 +156,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    //height: 507px;
+    min-height: 506px;
   }
 }
 
