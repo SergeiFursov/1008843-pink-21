@@ -101,10 +101,11 @@
         11.6376-6.9579 11.7995 6.8336zm0-1.2253L13.4401 5.3108 1.7656 12.2195V2.9897L13.5 1.7644l11.7344 1.2253v9.2369z"/>
   </symbol>
   <symbol id="left-arrow" viewBox="0 0 22 41">
-    <path d="M2.041 20.503L21.748 1.415A.821.821 0 0022 .83a.801.801 0 00-.252-.585A.86.86 0 0021.14 0a.882.882 0 00-.608.245L.252 19.909a.832.832 0 00-.252.59.81.81 0 00.253.59l20.279 19.673a.894.894 0 00.613.238.877.877 0 00.473-.143.838.838 0 00.313-.372.809.809 0 00-.183-.902L2.041 20.503z"/>
+    <path class="left-arrow"  d="M2.041 20.503L21.748 1.415A.821.821 0 0022 .83a.801.801 0 00-.252-.585A.86.86 0 0021.14 0a.882.882 0 00-.608.245L.252 19.909a.832.832 0 00-.252.59.81.81 0 00.253.59l20.279 19.673a.894.894 0 00.613.238.877.877 0 00.473-.143.838.838 0 00.313-.372.809.809 0 00-.183-.902L2.041 20.503z"/>
   </symbol>
-  <symbol id="right-arrow" viewBox="0 0 22 41">
-    <path d="M19.959 20.497L.252 39.585A.822.822 0 000 40.17a.801.801 0 00.252.585A.86.86 0 00.86 41a.88.88 0 00.608-.245l20.28-19.664a.834.834 0 00.252-.59.811.811 0 00-.253-.59L1.468.239A.894.894 0 00.855 0a.878.878 0 00-.473.143.838.838 0 00-.313.372.81.81 0 00.183.902l19.707 19.08z"/>
+  <symbol viewBox="0 0 22 41">
+    <path id="right-arrow"
+          d="M19.959 20.497L.252 39.585A.822.822 0 000 40.17a.801.801 0 00.252.585A.86.86 0 00.86 41a.88.88 0 00.608-.245l20.28-19.664a.834.834 0 00.252-.59.811.811 0 00-.253-.59L1.468.239A.894.894 0 00.855 0a.878.878 0 00-.473.143.838.838 0 00-.313.372.81.81 0 00.183.902l19.707 19.08z"/>
   </symbol>
 </svg>
 <header class="page-header">
@@ -185,7 +186,7 @@
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--cheers-up">
           <h3 class="advantages__title">Поднимает настроение</h3>
-          <p class="advantages__description">Приложение позволит вам победить осеннюю хандру<br>  и депрессию буквально в несколько кликов!</p>
+          <p class="advantages__description">Приложение позволит вам победить осеннюю хандру<br> и депрессию буквально в несколько кликов!</p>
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/adv-desktop-one.webp 1x, img/adv-desktop-one@2x.webp 2x">
             <img src="img/adv-desktop-one.png" srcset="img/adv-desktop-one@2x.png 2x" alt="Айфон с серым экраном">
@@ -243,13 +244,13 @@
         <button class="slider-button" type="button" aria-label="Вперед"></button>
       </div>
       <div class="reviews__arrows">
-        <button class="reviews__arrow reviews__arrow--left" aria-label="Назад">
+        <button class="reviews__arrow reviews__arrow--left">
           <svg class="left-arrow" width="22" height="41">
             <use xlink:href="#left-arrow"></use>
           </svg>
         </button>
         <button class="reviews__arrow reviews__arrow--right" aria-label="Вперед">
-          <svg class="right-arrow" width="22" height="41">
+          <svg class="right-arrow" width="22" height="41" role="group">
             <use xlink:href="#right-arrow"></use>
           </svg>
         </button>

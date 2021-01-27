@@ -162,10 +162,22 @@
 
 .reviews__arrow--left {
   left: -6px;
+
+  &:focus .left-arrow {
+    stroke: rgb(243, 233, 54);
+    stroke-width: 4;
+    filter: drop-shadow(0 3px 2px rgb(255, 136, 10));
+  }
 }
 
 .reviews__arrow--right {
   right: 6px;
+
+  &:focus .right-arrow {
+    stroke: rgb(243, 233, 54);
+    stroke-width: 4;
+    filter: drop-shadow(0 3px 2px rgb(255, 136, 10));
+  }
 }
 
 .left-arrow,
@@ -212,6 +224,12 @@
   &:hover {
     background-color: fade(@basic-navy-blue, 60%);
   }
+
+  &:focus {
+    border: rgb(255, 136, 10) 2px solid;
+    box-shadow: 0 0 2px 2px rgb(243, 233, 54);
+  }
+
 
   &:active {
     background-color: fade(@basic-navy-blue, 10%);
